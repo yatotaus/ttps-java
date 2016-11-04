@@ -64,7 +64,7 @@ public class Login extends HttpServlet {
 				if(usuario.getRol() <= 2)
 					url=request.getContextPath() + "/admin/administracion.jsp";
 				else
-					url=request.getContextPath() + "/index.jsp";
+					url=request.getContextPath() + "/cartelera.jsp";
 			}
 			else
 				sesion.setAttribute("error", "contraseña incorrecta");

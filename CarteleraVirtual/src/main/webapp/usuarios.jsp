@@ -48,7 +48,7 @@
 		</tr>
 		<tr>
 			<td>Johana Taus</td>
-			<td>yato@live.com</td>
+			<td>yato@lidi.com</td>
 			<td>13005/7</td>
 			<td>Estudiante</td>
 			<td><a>Modificar</a><a>Borrar</a></td>			
