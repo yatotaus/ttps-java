@@ -67,7 +67,7 @@
                             <div class="media-body">
                                 <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
 
-                                <h5 class="media-heading">Pablo Araujo</h5>
+                                <h5 class="media-heading">xxx xxx</h5>
                                 <small class="col-lg-10">Hola todo bien</small>
                             </div>
                         </div>

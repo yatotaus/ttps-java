@@ -13,7 +13,7 @@
                        <span class="sr-only">Close</span>
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Suscripción a la cartelera - Primer Año - ADP
+                    Suscripción a la cartelera 
                 </h4>
             </div>
             

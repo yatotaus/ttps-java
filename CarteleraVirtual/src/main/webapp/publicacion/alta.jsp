@@ -66,7 +66,7 @@
                       <button type="submit" class="btn pull-right btn-default">Publicar cartel</button>
                    
                     </form>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
