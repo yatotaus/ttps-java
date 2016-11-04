@@ -53,10 +53,11 @@
     </li>
 	<c:if test="${rol < 3}">
 		<li>
-	        <a href="<c:url value="/cartelera.jsp"/>"><b>Mis Publicaciones</b></a>
+	        <a href="<c:url value="/mispublicaciones.jsp"/>"><b>Mis Publicaciones</b></a>
         </li>
     </c:if>
-    <c:if test="${rol > 0 and rol < 2}">
+    <c:if test="${not empty rol}">
+    	<c:if test="${rol = 2}">
 		<ul class="nav navbar-nav">
       		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones <span class="caret"></span></a>
         		<ul class="dropdown-menu">
@@ -67,10 +68,11 @@
           		</ul>
           	</li>
           </ul>
+          </c:if>
     </c:if>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    	<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    	<li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
       	<c:choose>
 					<c:when test="${ empty usuario}" >
 						 <li>
@@ -100,7 +102,7 @@
 					</c:when>
 					<c:when test="${not empty usuario}" >
 						<li>
-	                		<a href="<c:url value="/Salir"/>"><b>Cerrar Sesion</b></a>
+	                		<a href="<c:url value="/Salir"/>"><b>Cerrar Sesion </b><span class="glyphicon glyphicon-log-out"></span></a>
 	              		</li>
 					</c:when>
 					</c:choose>
