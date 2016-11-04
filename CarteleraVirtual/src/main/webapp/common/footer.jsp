@@ -12,5 +12,5 @@
   </div>
   <p>TTPS - JAVA</p>
   <p>Facultad de Informática - UNLP - 50 y 120 - La Plata</p>
-  <p>Realizado por <a href="#" title="Itt" target="_blank" class="w3-hover-text-green">Itt</a></p>
+  <p>Desarollado por <a href="#" title="Itt" target="_blank" class="w3-hover-text-green">Itt</a></p>
 </footer>

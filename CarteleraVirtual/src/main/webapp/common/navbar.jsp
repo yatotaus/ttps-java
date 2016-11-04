@@ -56,6 +56,18 @@
 	        <a href="<c:url value="/publicacion/publicaciones.jsp"/>"><b>Mis Publicaciones</b></a>
         </li>
     </c:if>
+    <c:if test="${rol > 0 and rol < 2}">
+		<ul class="nav navbar-nav">
+      		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones <span class="caret"></span></a>
+        		<ul class="dropdown-menu">
+          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Usuarios</a></li>
+          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Carteleras</a></li>
+          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Templates</a></li>
+          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Últimas publicaciones</a></li>
+          		</ul>
+          	</li>
+          </ul>
+    </c:if>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     	<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

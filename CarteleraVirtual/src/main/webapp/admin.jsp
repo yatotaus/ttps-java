@@ -33,7 +33,7 @@
 		<tr>
 			<td>3° Año</td>
 			<td>Información Académica</td>
-			<td><a><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera"> Modificar cartelera</button></a><a>Borrar</a></td>
+			<td><a><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera"> <span class="glyphicon glyphicon-remove" aria-hidden="true"> Modificar cartelera</span> </button></a><a>Borrar</a></td>
 		</tr>
 		<tr>
 			<td>4° Año</td>
