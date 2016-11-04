@@ -1,5 +1,5 @@
 	
-		<div class="acministrarCartelera" style="display:none">
+		<div class="administrarCartelera" style="display:none">
 		
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#agregarCartelera"> Agregar cartelera</button>
 		

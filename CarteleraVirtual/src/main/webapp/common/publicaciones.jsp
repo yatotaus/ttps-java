@@ -53,7 +53,7 @@
                             </a>
                             <div class="media-body">
                                 <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
-                                <h5 class="media-heading">Pablo Araujo</h5>
+                                <h5 class="media-heading">Laura</h5>
                                 <small class="col-lg-10">No me gusta tu publicacion</small>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                             <div class="media-body">
                                 <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
 
-                                <h5 class="media-heading">Pablo Araujo</h5>
+                                <h5 class="media-heading">TTPS JAVA</h5>
                                 <small class="col-lg-10">Hola todo bien</small>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                             </a>
                             <div class="media-body">
                                 <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
-                                <h5 class="media-heading">Pablo Araujo</h5>
+                                <h5 class="media-heading">TTPS JAVA</h5>
 
                                 <small class="col-lg-10">Hola todo bien</small>
                             </div>

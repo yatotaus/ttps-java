@@ -18,13 +18,13 @@
         <p>Usuario Admin</p>
         <p>Dni : 1</p>
         <p>Pass: 1234</p>
-        <p>Usuario Docente</p>
+        <p>Usuario Otro</p>
         <p>Dni : 2</p>
         <p>Pass: 1234</p>
         <p>Usuario Alumno</p>
         <p>Dni : 3</p>
         <p>Pass: 1234</p>
-        <p>Usuario Otro</p>
+        <p>Usuario Docente</p>
         <p>Dni : 4</p>
         <p>Pass: 1234</p>
     </div>

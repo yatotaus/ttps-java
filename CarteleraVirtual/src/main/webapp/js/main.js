@@ -8,19 +8,19 @@ function agregarUsuario(){
 function usuarios(){
 	$('.administrarUsuarios').show();
 	$('.bienvenida').hide();
-	$('.administrarCarteleras').hide();
+	$('.administrarCartelera').hide();
 	
 }
 function carteleras(){
 	$('.administrarUsuarios').hide();
 	$('.bienvenida').hide();
-	$('.administrarCarteleras').sgiw();
+	$('.administrarCartelera').show();
 
 }
 
 function ultimasPublicaciones(){
 	$('.administrarUsuarios').hide();
 	$('.bienvenida').hide();
-	$('.administrarCarteleras').hide();
+	$('.administrarCartelera').hide();
 
 }

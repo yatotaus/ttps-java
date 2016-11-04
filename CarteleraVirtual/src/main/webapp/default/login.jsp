@@ -37,8 +37,5 @@
         </div>
     </div>
 	<jsp:include page="../common/footer.jsp" flush="true" ></jsp:include>
-
-
-
 </body>
 </html>

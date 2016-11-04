@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Administración cartelera virtual</title>
+<title>Mis carteleras</title>
 <jsp:include page="common/head.jsp" flush="true" >
 		<jsp:param name="titulo" value="Login"/>
 	</jsp:include>
@@ -12,14 +12,14 @@
 <body>
 	<jsp:include page="common/navbar.jsp" flush="true" ></jsp:include>
 	<div class="container">	
-		<h2>Bienvenido a la cartelera de TTPS-Opción java</h2>
+		<h2>Bienvenido a las cartelera de TTPS - Opción java</h2>
 	</div>
 <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
 
 <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 1</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">
@@ -37,7 +37,7 @@
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 2</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">
@@ -55,7 +55,7 @@
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 3</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">
@@ -73,7 +73,7 @@
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 4</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">
@@ -91,7 +91,7 @@
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 5</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">
@@ -109,7 +109,7 @@
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 6</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">
@@ -127,7 +127,7 @@
     <div class="w3-third w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-theme-l2">
-          <p class="w3-xlarge">Novedad 2</p>
+          <p class="w3-xlarge">Cartelera 7</p>
         </li>
         <li class="w3-padding-16"><b>Novedad</b> novedad 2</li>
         <div class="w3-container">

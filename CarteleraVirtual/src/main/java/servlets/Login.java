@@ -24,20 +24,11 @@ public class Login extends HttpServlet {
      */
     public Login() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String usu, pass;
 		usu = request.getParameter("dni");
@@ -64,7 +55,7 @@ public class Login extends HttpServlet {
 				if(usuario.getRol() <= 2)
 					url=request.getContextPath() + "/admin/administracion.jsp";
 				else
-					url=request.getContextPath() + "/index.jsp";
+					url=request.getContextPath() + "/cartelera.jsp";
 			}
 			else
 				sesion.setAttribute("error", "contraseña incorrecta");
