@@ -109,12 +109,12 @@ footer {
     margin-bottom: 10px;
 }
 
-
+/*
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
 }
-
+*/
 .titlebar {
     background: #4CAF50;
     margin-bottom: 20px;
@@ -126,6 +126,7 @@ footer {
     margin: 0;
     color: #FFF;
 }
+/*
 .navbar-brand {
     padding: 5px 15px;
 }
@@ -148,7 +149,7 @@ footer {
     margin-right: 5px;
     float: left;
 }
-
+*/
 .publicacion {
     max-width: none;
     max-height: none;
@@ -213,7 +214,7 @@ footer {
 .titlebar h2 small {
     margin: -7px 0;
 }
-
+/*
 .sidenav {
     background: url(../img/menu-bg.png) left top repeat;
     width: 200px;
@@ -287,7 +288,7 @@ footer {
     float: left;
     border-bottom: 1px solid #888;
 }
-
+*/
 .alta{
     margin-top: 25px;
     padding: 0px -15px;
@@ -313,7 +314,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-
+/*
   .navbar-wrapper .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -327,7 +328,7 @@ footer {
   .navbar-wrapper .navbar {
     border-radius: 4px;
   }
-  
+  */
   .listados {
     overflow-x: auto;
 }
@@ -359,4 +360,5 @@ footer {
         background-color: inherit;
         border-top:0 none;
     }
+    
 }

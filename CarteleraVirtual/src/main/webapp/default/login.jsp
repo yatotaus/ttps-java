@@ -27,7 +27,7 @@
                             <c:if test="${error != null}">
 								<p>${error}</p>
 							</c:if>
-                            <button type="submit" class="btn btn-block btn-success">
+                            <button type="submit" class="btn btn-primary btn-block" style="background:#009688">
                                 Ingresar al sistema
                             </button>
                         </form>

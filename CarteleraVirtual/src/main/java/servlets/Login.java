@@ -46,7 +46,7 @@ public class Login extends HttpServlet {
         HashMap<String,Usuario> usuarios = new HashMap<String,Usuario>();
         Usuario[] arregloUsuarios =
     		{new Usuario("1", "1234",1),
-    		new Usuario( "2", "1234",2),
+    		new Usuario("2", "1234",2),
     		new Usuario("3", "1234",3),
     		new Usuario("4", "1234",0)};
     	for (Usuario usur: arregloUsuarios)
