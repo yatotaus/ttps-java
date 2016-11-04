@@ -6,8 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>${titulo}</title>
 
-	<link rel="stylesheet" href="<c:url value="/assets/css/bootstrap.min.css"/>">
-	<link rel="stylesheet" href="<c:url value="/assets/css/styles.css"/>">
-	<script src="<c:url value="/assets/js/jquery-3.1.1.min.js"/>"></script>
-    <script src="<c:url value="/assets/js/bootstrap.min.js"/>"></script>
-    <script src="<c:url value="/assets/js/main.js"/>"></script>
+	<link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css"/>">
+	<link rel="stylesheet" href="<c:url value="/css/styles.css"/>">
+	<script src="<c:url value="/js/jquery-3.1.1.min.js"/>"></script>
+    <script src="<c:url value="/js/bootstrap.min.js"/>"></script>
+    <script src="<c:url value="/js/main.js"/>"></script>
+	<link rel="stylesheet" href="<c:url value="/css/carousel.css"/>">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-black.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    

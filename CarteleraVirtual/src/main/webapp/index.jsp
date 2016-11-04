@@ -13,7 +13,6 @@
 	<jsp:include page="default/news.jsp" flush="true" ></jsp:include>
 	<jsp:include page="default/events.jsp" flush="true" ></jsp:include>
 	<jsp:include page="default/works.jsp" flush="true" ></jsp:include>
-	<!-- Modifico para probar git -->
 
     <div class="col-sm-8 col-sm-offset-2 ">
         <p>Usuario Admin</p>
