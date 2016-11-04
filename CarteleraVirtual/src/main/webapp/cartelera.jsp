@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Administración cartelera virtual</title>
+<title>Mis carteleras</title>
 <jsp:include page="common/head.jsp" flush="true" >
 		<jsp:param name="titulo" value="Login"/>
 	</jsp:include>
@@ -12,7 +12,7 @@
 <body>
 	<jsp:include page="common/navbar.jsp" flush="true" ></jsp:include>
 	<div class="container">	
-		<h2>Bienvenido a la cartelera de TTPS - Opción java</h2>
+		<h2>Bienvenido a las cartelera de TTPS - Opción java</h2>
 	</div>
 <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
 
