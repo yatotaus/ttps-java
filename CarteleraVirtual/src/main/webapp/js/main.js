@@ -24,3 +24,8 @@ function ultimasPublicaciones(){
 	$('.administrarCartelera').hide();
 
 }
+function finAgregar(){
+	$('#table').removeClass("col-md-8");
+	$('.elemento').hide();
+
+}

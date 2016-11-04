@@ -12,49 +12,103 @@
 		<tr>
 			<td>1° Año</td>
 			<td>Información Académica</td>
-			<td><a>Modificar</a><a>Borrar</a></td>			
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>			
 		</tr>
 		<tr>
 			<td>2° Año</td>
 			<td>Información Académica</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		<tr>
 			<td>3° Año</td>
 			<td>Información Académica</td>
-			<td><a><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera"> <span class="glyphicon glyphicon-remove" aria-hidden="true"> Modificar cartelera</span> </button></a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		<tr>
 			<td>4° Año</td>
 			<td>Información Académica</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		<tr>
 			<td>5° Año</td>
 			<td>Información Académica</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		
 		
 		<tr>
 			<td>Eventos</td>
 			<td>Información Institucional</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		<tr>
 			<td>Posgrado</td>
 			<td>Información Académica</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		<tr>
 			<td>Ofertas Laborales</td>
 			<td>Anuncios externos</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>
 		<tr>
 			<td>Anuncios administrativos</td>
 			<td>Información Institucional</td>
-			<td><a>Modificar</a><a>Borrar</a></td>
+			<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera">
+   <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar
+</button>
+
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#borrarCartelera">
+   <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Borrar
+</button></td>
 		</tr>		
 	
 	</table>
@@ -73,7 +127,7 @@
                         <div class="form-group">
                             <label for="ejemplo_email_1" class="col-sm-3 control-label">Nombre de la cartelera</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="ejemplo_email_1" placeholder="Secretaría Académica" required="required">
+                                <input type="email" class="form-control" id="ejemplo_email_1" value="Secretaría Académica" required="required">
                             </div>
                         </div>
                         
@@ -87,6 +141,7 @@
                                     <option value="value2">Jorge Rosso</option>
                                     <option value="value3">Pablo Thomas</option>
                                     <option value="value3">Rodolfo Bertone</option>
+                                    <option value="value3" selected>Marcelo Naiouf</option>
                                     <option value="value3">Otros...</option>
                                 </select>
                             </div>
@@ -111,7 +166,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">agregarCartelera</button>
+        <button type="button" class="btn btn-primary">Modificar Cartelera</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -163,15 +218,13 @@
                           		</select>
                             </div>
                         </div>
-                    	<button type="submit" class="pull-right btn btn-primary">Aceptar
-                        </button>
                     </form>
       
       
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">AgregarCartelera</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Agregar Cartelera</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
