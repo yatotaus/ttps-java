@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import clases.Usuario;
+import clases.*;
+
 
 /**
  * Servlet implementation class Login
@@ -36,10 +37,10 @@ public class Login extends HttpServlet {
 		/* carga para ejemplo, maqueta*/
         HashMap<String,Usuario> usuarios = new HashMap<String,Usuario>();
         Usuario[] arregloUsuarios =
-    		{new Usuario("1", "1234",1),
-    		new Usuario("2", "1234",2),
-    		new Usuario("3", "1234",3),
-    		new Usuario("4", "1234",0)};
+    		{new Admin("1", "1234",1),
+    		new PublicadorPermisos("2", "1234",2),
+    		new UsuarioOnline("3", "1234",3),
+    		new UsuarioOnline("4", "1234",0)};
     	for (Usuario usur: arregloUsuarios)
     		usuarios.put(usur.getUsuario(), usur);
     	
