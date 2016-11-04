@@ -10,7 +10,26 @@
 </head>
 <body>
 	<jsp:include page="../common/navbar.jsp" flush="true" ></jsp:include>
-	<jsp:include page="../common/menu.jsp" flush="true" ></jsp:include>
+	
+	<H3>Bienvenido administrador!</H3>
+	
+	<h4>Estadísticas de uso de la plataforma</h4>
+	
+	<ul>
+  		<li>493 Usuarios activos
+  			<ul>
+  				<li>60 Docentes</li>
+  				<li>400 Alumnos</li>
+  				<li>3 Administradores</li>
+  				<li>30 Publicadores</li>
+  			</ul>
+  		</li>
+  		<li>22 Carteleras actualmente</li>
+  		<li>40 suscriptores promedio por cartelera</li>
+  		<li>6 suscripcions a carteleras por usuario </li>
+  		<li>349 Publicaciones</li>
+  		<li>100 Comentarios</li>
+	</ul>
   	<jsp:include page="../common/footer.jsp" flush="true" ></jsp:include>
 </body>
 </html>
