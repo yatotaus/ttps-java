@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
 				sesion.setAttribute("rol",usuario.getRol());
 				sesion.setAttribute("error", null);
 				/*se que es feo es solo para la maqueta*/
-				if(usuario.getRol() <= 2)
+				if(usuario.getRol() < 2)
 					url=request.getContextPath() + "/admin/administracion.jsp";
 				else
 					url=request.getContextPath() + "/cartelera.jsp";
