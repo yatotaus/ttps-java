@@ -12,7 +12,7 @@
 <body>
 	<jsp:include page="common/navbar.jsp" flush="true" ></jsp:include>
 	<div class="container">	
-		<h2>Bienvenido a las cartelera de TTPS - Opción java</h2>
+		<h2>Mis Carteleras</h2>
 	</div>
 <div class="w3-row-padding w3-center w3-padding-64" id="pricing">
 
