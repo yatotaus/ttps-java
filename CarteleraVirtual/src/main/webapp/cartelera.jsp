@@ -27,7 +27,7 @@
 			  <p>Blablabla</p>
 			  <p>Blablabla</p>
 		</div>
-         <li class="w3-theme-l5 w3-padding-24">
+         <li class="w3-theme-l5 w3-padding-24">              
         <button class="w3-btn w3-teal w3-padding-small"><i class="fa fa-check"></i> Modificar</button>
           <button class="w3-btn w3-teal w3-padding-small"><i class="fa fa-check"></i> Ver más</button>
           <button class="w3-btn w3-teal w3-padding-small"><i class="fa fa-check"></i> Borrar</button>

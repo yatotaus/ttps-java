@@ -14,7 +14,7 @@
 <body>
     <jsp:include page="../common/navbar.jsp" flush="true" ></jsp:include>
     <div class="titlebar">
-        <h2>Cartelera - Primer Año - ADP
+        <h2>Cartelera 
         <small class="pull-right">
             <a href="#" data-toggle="modal" data-target="#myModalHorizontal" class="btn btn-primary">Suscribirme</a>
         </small>
