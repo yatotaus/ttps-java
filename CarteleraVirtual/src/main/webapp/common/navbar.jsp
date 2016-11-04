@@ -57,7 +57,7 @@
         </li>
     </c:if>
     <c:if test="${not empty rol}">
-    	<c:if test="${rol = 2}">
+    	<c:if test="${rol > 1 and rol < 2 }">
 		<ul class="nav navbar-nav">
       		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones <span class="caret"></span></a>
         		<ul class="dropdown-menu">
@@ -109,7 +109,10 @@
 					
     </ul>
   </div>
+ 
 </nav>
+
+<!-- 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -221,3 +224,4 @@
         </div>
     </div>
 </nav>
+-->
