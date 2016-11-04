@@ -34,6 +34,8 @@
 		</div>
 		<jsp:include page="usuarios.jsp" flush="true" ></jsp:include>
 		<jsp:include page="admin.jsp" flush="true" ></jsp:include>
+		<jsp:include page="ultimas.jsp" flush="true" ></jsp:include>
+		
 		
 	</div>
   	<jsp:include page="../common/footer.jsp" flush="true" ></jsp:include>

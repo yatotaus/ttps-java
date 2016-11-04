@@ -53,7 +53,7 @@
     </li>
 	<c:if test="${rol < 3}">
 		<li>
-	        <a href="<c:url value="/publicacion/publicaciones.jsp"/>"><b>Mis Publicaciones</b></a>
+	        <a href="<c:url value="/cartelera.jsp"/>"><b>Mis Publicaciones</b></a>
         </li>
     </c:if>
     <c:if test="${rol > 0 and rol < 2}">

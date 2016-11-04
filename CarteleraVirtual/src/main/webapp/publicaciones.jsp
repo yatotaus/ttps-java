@@ -11,11 +11,7 @@
 <body>
 	<jsp:include page="common/navbar.jsp" flush="true" ></jsp:include>
 	<jsp:include page="default/news.jsp" flush="true" ></jsp:include>
-	
-	<jsp:include page="default/events.jsp" flush="true" >
-		<jsp:param name= 'titulo' value= "Próximos eventos"/>
-		<jsp:param name="subtitulo" value="Detalles a cerca de los últimos y más innovadores eventos que ocurrirán en las instalaciones. No te quedes con las ganas de formar parte de lo mejor"/>
-	</jsp:include>
+	<jsp:include page="default/events.jsp" flush="true" ></jsp:include>
 	<jsp:include page="default/works.jsp" flush="true" ></jsp:include>
 
     <div class="col-sm-8 col-sm-offset-2 ">

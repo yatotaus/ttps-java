@@ -9,12 +9,13 @@ function usuarios(){
 	$('.administrarUsuarios').show();
 	$('.bienvenida').hide();
 	$('.administrarCartelera').hide();
-	
+	$('.ultimasPublicaciones').show();
 }
 function carteleras(){
 	$('.administrarUsuarios').hide();
 	$('.bienvenida').hide();
 	$('.administrarCartelera').show();
+	$('.ultimasPublicaciones').show();
 
 }
 
@@ -22,6 +23,7 @@ function ultimasPublicaciones(){
 	$('.administrarUsuarios').hide();
 	$('.bienvenida').hide();
 	$('.administrarCartelera').hide();
+	$('.ultimasPublicaciones').show();
 
 }
 function finAgregar(){

@@ -145,6 +145,8 @@
                                     <option value="value2">Publicador</option>
                                 </select>
                         </div>
+                    <button type="button" class="btn btn-default" onclick="finAgregar();" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-danger" onclick="finAgregar();">Modificar Usuario</button>
 		</form>
       </div>
       <div class="modal-footer">
