@@ -9,13 +9,13 @@ function usuarios(){
 	$('.administrarUsuarios').show();
 	$('.bienvenida').hide();
 	$('.administrarCartelera').hide();
-	$('.ultimasPublicaciones').show();
+	$('.ultimasPublicaciones').hide();
 }
 function carteleras(){
 	$('.administrarUsuarios').hide();
 	$('.bienvenida').hide();
 	$('.administrarCartelera').show();
-	$('.ultimasPublicaciones').show();
+	$('.ultimasPublicaciones').hide();
 
 }
 
