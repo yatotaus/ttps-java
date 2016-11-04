@@ -60,10 +60,10 @@
 		<ul class="nav navbar-nav">
       		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones <span class="caret"></span></a>
         		<ul class="dropdown-menu">
-          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Usuarios</a></li>
-          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Carteleras</a></li>
+          			<li><a onclick="usuarios();" class="dropdown-toggle" data-toggle="dropdown">Administrar Usuarios</a></li>
+          			<li><a onclick="carteleras();" class="dropdown-toggle" data-toggle="dropdown">Administrar Carteleras</a></li>
           			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar Templates</a></li>
-          			<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Últimas publicaciones</a></li>
+          			<li><a onclick="ultimasPublicaciones();" class="dropdown-toggle" data-toggle="dropdown">Últimas publicaciones</a></li>
           		</ul>
           	</li>
           </ul>

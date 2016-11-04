@@ -1,60 +1,49 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AdministraciÃ³n cartelera virtual</title>
-<jsp:include page="common/head.jsp" flush="true" >
-		<jsp:param name="titulo" value="Login"/>
-	</jsp:include>
-</head>
-<body>
-	<jsp:include page="common/navbar.jsp" flush="true" ></jsp:include>
 	
+		<div class="acministrarCartelera" style="display:none">
+		
 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#agregarCartelera"> Agregar cartelera</button>
 		
 	<table class="table table-hover">
 		<tr>
-			<th>TÃ­tulo</th>
-			<th>SecciÃ³n</th>
+			<th>Título</th>
+			<th>Sección</th>
 			<th>Acciones</th>
 		</tr>
 		<tr>
-			<td>1Â° AÃ±o</td>
-			<td>InformaciÃ³n AcadÃ©mica</td>
+			<td>1° Año</td>
+			<td>Información Académica</td>
 			<td><a>Modificar</a><a>Borrar</a></td>			
 		</tr>
 		<tr>
-			<td>2Â° AÃ±o</td>
-			<td>InformaciÃ³n AcadÃ©mica</td>
+			<td>2° Año</td>
+			<td>Información Académica</td>
 			<td><a>Modificar</a><a>Borrar</a></td>
 		</tr>
 		<tr>
-			<td>3Â° AÃ±o</td>
-			<td>InformaciÃ³n AcadÃ©mica</td>
+			<td>3° Año</td>
+			<td>Información Académica</td>
 			<td><a><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modificarCartelera"> <span class="glyphicon glyphicon-remove" aria-hidden="true"> Modificar cartelera</span> </button></a><a>Borrar</a></td>
 		</tr>
 		<tr>
-			<td>4Â° AÃ±o</td>
-			<td>InformaciÃ³n AcadÃ©mica</td>
+			<td>4° Año</td>
+			<td>Información Académica</td>
 			<td><a>Modificar</a><a>Borrar</a></td>
 		</tr>
 		<tr>
-			<td>5Â° AÃ±o</td>
-			<td>InformaciÃ³n AcadÃ©mica</td>
+			<td>5° Año</td>
+			<td>Información Académica</td>
 			<td><a>Modificar</a><a>Borrar</a></td>
 		</tr>
 		
 		
 		<tr>
 			<td>Eventos</td>
-			<td>InformaciÃ³n Institucional</td>
+			<td>Información Institucional</td>
 			<td><a>Modificar</a><a>Borrar</a></td>
 		</tr>
 		<tr>
 			<td>Posgrado</td>
-			<td>InformaciÃ³n AcadÃ©mica</td>
+			<td>Información Académica</td>
 			<td><a>Modificar</a><a>Borrar</a></td>
 		</tr>
 		<tr>
@@ -64,7 +53,7 @@
 		</tr>
 		<tr>
 			<td>Anuncios administrativos</td>
-			<td>InformaciÃ³n Institucional</td>
+			<td>Información Institucional</td>
 			<td><a>Modificar</a><a>Borrar</a></td>
 		</tr>		
 	
@@ -84,7 +73,7 @@
                         <div class="form-group">
                             <label for="ejemplo_email_1" class="col-sm-3 control-label">Nombre de la cartelera</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="ejemplo_email_1" placeholder="SecretarÃ­a AcadÃ©mica" required="required">
+                                <input type="email" class="form-control" id="ejemplo_email_1" placeholder="Secretaría Académica" required="required">
                             </div>
                         </div>
                         
@@ -103,15 +92,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="cartelera"  class="col-sm-3 control-label">UbicaciÃ³n de la cartelera:</label>
+                            <label for="cartelera"  class="col-sm-3 control-label">Ubicación de la cartelera:</label>
                             <div class="col-sm-9">
                                 <select  id="cartelera" name="cartelera" class="form-control" required>
                             	    <option value="value3">General</option>
-                              		<option value="value3">1 AÃ±o</option>
-                              		<option value="value3">2 AÃ±o</option>
-                          			<option value="value1">3 AÃ±o</option> 
-                        			<option value="value2">4 AÃ±o/</option>
-                        			<option value="value3">5 AÃ±o</option>
+                              		<option value="value3">1 Año</option>
+                              		<option value="value3">2 Año</option>
+                          			<option value="value1">3 Año</option> 
+                        			<option value="value2">4 Año/</option>
+                        			<option value="value3">5 Año</option>
                         			<option value="value3">Administrativa</option>  			
                           		</select>
                             </div>
@@ -142,7 +131,7 @@
                         <div class="form-group">
                             <label for="ejemplo_email_1" class="col-sm-3 control-label">Nombre de la cartelera</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="ejemplo_email_1" placeholder="SecretarÃ­a AcadÃ©mica" required="required">
+                                <input type="email" class="form-control" id="ejemplo_email_1" placeholder="Secretaría Académica" required="required">
                             </div>
                         </div>
                         
@@ -161,15 +150,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="cartelera"  class="col-sm-3 control-label">UbicaciÃ³n de la cartelera:</label>
+                            <label for="cartelera"  class="col-sm-3 control-label">Ubicación de la cartelera:</label>
                             <div class="col-sm-9">
                                 <select  id="cartelera" name="cartelera" class="form-control" required>
                             	    <option value="value3">General</option>
-                              		<option value="value3">1 AÃ±o</option>
-                              		<option value="value3">2 AÃ±o</option>
-                          			<option value="value1">3 AÃ±o</option> 
-                        			<option value="value2">4 AÃ±o/</option>
-                        			<option value="value3">5 AÃ±o</option>
+                              		<option value="value3">1 Año</option>
+                              		<option value="value3">2 Año</option>
+                          			<option value="value1">3 Año</option> 
+                        			<option value="value2">4 Año/</option>
+                        			<option value="value3">5 Año</option>
                         			<option value="value3">Administrativa</option>  			
                           		</select>
                             </div>
@@ -187,7 +176,4 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div>
-
-	
-</body>
-</html>
+</div>

@@ -5,3 +5,22 @@ function agregarUsuario(){
 	$('#table').addClass("col-md-8");
 	$('.elemento').show();
 }
+function usuarios(){
+	$('.administrarUsuarios').show();
+	$('.bienvenida').hide();
+	$('.administrarCarteleras').hide();
+	
+}
+function carteleras(){
+	$('.administrarUsuarios').hide();
+	$('.bienvenida').hide();
+	$('.administrarCarteleras').sgiw();
+
+}
+
+function ultimasPublicaciones(){
+	$('.administrarUsuarios').hide();
+	$('.bienvenida').hide();
+	$('.administrarCarteleras').hide();
+
+}
