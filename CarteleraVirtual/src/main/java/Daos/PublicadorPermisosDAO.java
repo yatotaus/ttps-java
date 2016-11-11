@@ -1,5 +1,5 @@
 package Daos;
 
-public class PublicadorPermisosDAO {
+public class PublicadorPermisosDAO<T> extends GenericoDAOHibernateJPA<T> {
 
 }
