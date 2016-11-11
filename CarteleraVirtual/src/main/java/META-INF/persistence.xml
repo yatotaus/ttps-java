@@ -8,6 +8,9 @@
  <provider>org.hibernate.ejb.HibernatePersistence</provider>
  <class>clases.Cartelera</class>
  <class>clases.Usuario</class>
+ <class>clases.UsuarioOnline</class>
+ <class>clases.PublicadorPermisos</class>
+ <class>clases.Admin</class>
  <class>clases.Publicacion</class>
  <class>clases.MisCarteleras</class>
  <class>clases.Comentario</class>
