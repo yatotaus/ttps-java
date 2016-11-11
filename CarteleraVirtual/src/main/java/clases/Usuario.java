@@ -8,7 +8,12 @@ public abstract class Usuario {
 	private Integer dni;
 	private String email;
 	private MisCarteleras misCarteleras;
+	private Long id;
 	
+	public Usuario() {
+		super();
+	}
+
 	public MisCarteleras getMiTemplate() {
 		return misCarteleras;
 	}

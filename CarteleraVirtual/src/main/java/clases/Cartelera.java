@@ -5,7 +5,19 @@ public class Cartelera {
 	private Publicacion [ ] publicaciones;
 	private String nombreCartelera;
 	private Cartelera [ ] carteleras;
-	
+	private Long id;
+	public Cartelera() {
+		super();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public Cartelera[] getCarteleras() {
 		return carteleras;
 	}

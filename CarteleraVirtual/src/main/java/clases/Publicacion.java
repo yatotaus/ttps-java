@@ -6,7 +6,19 @@ public class Publicacion {
 	private Usuario autor;
 	private Comentario [ ] comentarios;
 	private boolean comentariosHab;
-	
+	private Long id;
+	public Publicacion() {
+		super();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public boolean isComentariosHab() {
 		return comentariosHab;
 	}

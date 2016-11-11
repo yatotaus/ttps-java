@@ -4,7 +4,19 @@ public class MisCarteleras {
 	
 	private Usuario dueño;
 	private Cartelera [ ] carteleras;
-	
+	private Long id;
+	public MisCarteleras() {
+		super();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public Usuario getDueño() {
 		return dueño;
 	}
