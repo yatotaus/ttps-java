@@ -17,21 +17,6 @@
 		<jsp:param name="subtitulo" value="Detalles a cerca de los últimos y más innovadores eventos que ocurrirán en las instalaciones. No te quedes con las ganas de formar parte de lo mejor"/>
 	</jsp:include>
 	<jsp:include page="default/works.jsp" flush="true" ></jsp:include>
-
-    <div class="col-sm-8 col-sm-offset-2 ">
-        <p>Usuario Admin</p>
-        <p>Dni : 1</p>
-        <p>Pass: 1234</p>
-        <p>Usuario Docente</p>
-        <p>Dni : 2</p>
-        <p>Pass: 1234</p>
-        <p>Usuario Alumno</p>
-        <p>Dni : 3</p>
-        <p>Pass: 1234</p>
-        <p>Usuario Otro</p>
-        <p>Dni : 4</p>
-        <p>Pass: 1234</p>
-    </div>
   	<jsp:include page="common/footer.jsp" flush="true" ></jsp:include>
 </body>
 </html>
