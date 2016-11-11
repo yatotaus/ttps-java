@@ -3,8 +3,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="MENSAJES")
- 
-
 public class Cartelera {
 	@Id @GeneratedValue
 	 @Column(name="MENSAJE_ID")	

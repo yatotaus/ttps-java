@@ -2,7 +2,18 @@ package Daos;
 
 import java.io.Serializable;
 
+import javax.persistence.*;
+
+import clases.Cartelera;
+
 public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
+	
+	public void agregar(Cartelera c){
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("miUP");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction etx = em.getTransaction();
+		etx.begin();
+	}
 
 	public void actualizar(Class<T> Objeto) {
 		
