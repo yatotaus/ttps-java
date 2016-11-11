@@ -1,5 +1,9 @@
 package clases;
+import javax.persistence.*;
 
+@Entity
+@Table(name="MENSAJES")
+ 
 public class PublicadorPermisos extends Usuario{
 
 	public PublicadorPermisos(String usuario, String clave, Integer rol) {
