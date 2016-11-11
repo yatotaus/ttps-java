@@ -1,7 +1,9 @@
 package clases;
 
-public class Admin extends Usuario{
 
+public class Admin extends Usuario{
+	
+	
 	public Admin(String usuario, String clave, Integer rol) {
 		super(usuario, clave, rol);
 	}
@@ -10,6 +12,11 @@ public class Admin extends Usuario{
 		
 	}
 	
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public void eliminarCartelera(Cartelera car){
 		
 	}

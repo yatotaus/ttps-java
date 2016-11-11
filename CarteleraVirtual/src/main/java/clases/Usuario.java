@@ -1,7 +1,13 @@
 package clases;
+import javax.persistence.*;
 
-public abstract class Usuario {
-	
+@Entity
+@Table(name="MENSAJES")
+ 
+
+public class Usuario {
+	@Id @GeneratedValue
+	 @Column(name="MENSAJE_ID")	
 	private String usuario;
 	private String clave;
 	private Integer rol;

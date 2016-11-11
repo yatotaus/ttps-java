@@ -1,7 +1,13 @@
 package clases;
+import javax.persistence.*;
+
+@Entity
+@Table(name="MENSAJES")
+ 
 
 public class MisCarteleras {
-	
+	@Id @GeneratedValue
+	 @Column(name="MENSAJE_ID")	
 	private Usuario dueño;
 	private Cartelera [ ] carteleras;
 	private Long id;

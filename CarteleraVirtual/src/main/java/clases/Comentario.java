@@ -1,7 +1,13 @@
 package clases;
+import javax.persistence.*;
+
+@Entity
+@Table(name="MENSAJES")
+ 
 
 public class Comentario {
-	
+	@Id @GeneratedValue
+	 @Column(name="MENSAJE_ID")
 	private Usuario autorComentario;
 	private String texto;
 	private Comentario [ ] respuestas;
