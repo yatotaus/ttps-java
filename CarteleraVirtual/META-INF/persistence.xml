@@ -4,7 +4,7 @@
  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
  version="2.1">
-<persistence-unit name="miUP">
+<persistence-unit name="miUP2">
  <provider>org.hibernate.ejb.HibernatePersistence</provider>
  <class>clases.Cartelera</class>
  <class>clases.Usuario</class>
@@ -16,8 +16,8 @@
  <class>clases.Comentario</class>
  <properties>
  <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
- <property name="hibernate.connection.password" value="admin"/>
- <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/cartelera"/>
+ <property name="hibernate.connection.password" value=""/>
+ <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mibd"/>
  <property name="hibernate.connection.username" value="root" />
  <property name="hibernate.default_schema" value="stock" />
  <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>

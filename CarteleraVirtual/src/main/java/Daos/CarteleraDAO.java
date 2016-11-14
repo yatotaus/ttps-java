@@ -8,11 +8,21 @@ import clases.Cartelera;
 
 public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 	
-	public void agregar(Cartelera c){
+	public void agregar(Cartelera cart){
+		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("miUP");
 		EntityManager em = emf.createEntityManager();
+		
 		EntityTransaction etx = em.getTransaction();
 		etx.begin();
+		
+		Cartelera c = new Cartelera();
+		c.setNombreCartelera("Soy la primera cartelera");
+		em.persist(c);
+		etx.commit();
+		em.close();
+		
+		
 	}
 
 	public void actualizar(Class<T> Objeto) {

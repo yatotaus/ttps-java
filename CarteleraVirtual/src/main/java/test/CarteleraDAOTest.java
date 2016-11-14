@@ -4,10 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import Daos.CarteleraDAO;
+import clases.Cartelera;
+
 public class CarteleraDAOTest {
 
 	@Test
 	public void testActualizar() {
+		CarteleraDAO c = new CarteleraDAO();
+		c.agregar(new Cartelera());
 	}
 
 	@Test
@@ -33,5 +38,5 @@ public class CarteleraDAOTest {
 	@Test
 	public void testAgregar() {
 	}
-
+	
 }

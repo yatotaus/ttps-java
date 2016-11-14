@@ -2,14 +2,19 @@ package clases;
 import javax.persistence.*;
 
 @Entity
-@Table(name="MENSAJES")
+@Table(name="cartelera")
 public class Cartelera {
 	@Id @GeneratedValue
-	 @Column(name="MENSAJE_ID")	
-	private Publicacion [ ] publicaciones;
-	private String nombreCartelera;
-	private Cartelera [ ] carteleras;
+	 @Column(name="idCartelera")
 	private Long id;
+
+	@GeneratedValue
+	@Column(name="nombre")
+	private String nombreCartelera;
+	
+	private Publicacion [ ] publicaciones;
+	
+	private Cartelera [ ] carteleras;
 	public Cartelera() {
 		super();
 	}
@@ -21,7 +26,15 @@ public class Cartelera {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
+	private boolean comentarios;
+	
+	public boolean getComentarios(){
+		return comentarios;
+	}
+	public void setComentarios(boolean coment){
+		comentarios = coment;
+	}
 	public Cartelera[] getCarteleras() {
 		return carteleras;
 	}
