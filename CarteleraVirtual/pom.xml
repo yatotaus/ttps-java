@@ -25,20 +25,12 @@
         <artifactId>jstl</artifactId>
         <version>1.2</version>
     </dependency>
-<<<<<<< HEAD
-=======
- 	
->>>>>>> branch 'master' of https://github.com/yatotaus/ttps-java
+
 	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
-<<<<<<< HEAD
 	    <version>5.1.0.Final</version>
-=======
-	    <version>5.0.3.Final</version>  
->>>>>>> branch 'master' of https://github.com/yatotaus/ttps-java
 	</dependency>
-<<<<<<< HEAD
 	<dependency>
     	<groupId>javax.persistence</groupId>
     	<artifactId>persistence-api</artifactId>
