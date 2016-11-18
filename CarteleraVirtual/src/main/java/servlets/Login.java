@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import Daos.CarteleraDAO;
 import clases.*;
 
 
@@ -31,6 +32,10 @@ public class Login extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		CarteleraDAO c = new CarteleraDAO();
+		c.agregar(new Cartelera());
+		
 		String usu, pass;
 		usu = request.getParameter("dni");
         pass = request.getParameter("password");

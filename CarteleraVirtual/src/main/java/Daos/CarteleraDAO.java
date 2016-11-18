@@ -1,7 +1,6 @@
 package Daos;
 
 import java.io.Serializable;
-
 import javax.persistence.*;
 
 import clases.Cartelera;
@@ -10,10 +9,15 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 	
 	public void agregar(Cartelera cart){
 		
+<<<<<<< HEAD
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("juan");
+=======
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pepe");
+>>>>>>> branch 'master' of https://github.com/yatotaus/ttps-java
 		EntityManager em = emf.createEntityManager();
 		
 		EntityTransaction etx = em.getTransaction();
+	
 		etx.begin();
 		
 		Cartelera c = new Cartelera();
@@ -21,7 +25,11 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 		em.persist(c);
 		etx.commit();
 		em.close();
+<<<<<<< HEAD
 		
+=======
+				
+>>>>>>> branch 'master' of https://github.com/yatotaus/ttps-java
 	}
 
 	public void actualizar(Class<T> Objeto) {
