@@ -10,7 +10,7 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 	
 	public void agregar(Cartelera cart){
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("miUP");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("juan");
 		EntityManager em = emf.createEntityManager();
 		
 		EntityTransaction etx = em.getTransaction();
@@ -21,7 +21,6 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 		em.persist(c);
 		etx.commit();
 		em.close();
-		
 		
 	}
 

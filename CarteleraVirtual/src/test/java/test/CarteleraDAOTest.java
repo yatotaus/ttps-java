@@ -1,7 +1,5 @@
 package test;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import Daos.CarteleraDAO;
@@ -11,7 +9,7 @@ public class CarteleraDAOTest {
 
 	@Test
 	public void testActualizar() {
-		CarteleraDAO c = new CarteleraDAO();
+		CarteleraDAO<Integer> c = new CarteleraDAO();
 		c.agregar(new Cartelera());
 	}
 
