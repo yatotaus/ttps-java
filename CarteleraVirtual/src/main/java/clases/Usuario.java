@@ -8,12 +8,18 @@ import javax.persistence.*;
 public class Usuario {
 	@Column(name="MENSAJE_ID")
 	@Id @GeneratedValue
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> d03efe08a6d68258d61ce9ef456229e39eb039e6
 	private String usuario;
 	private String clave;
 	private Integer rol;
 	private Integer dni;
 	private String email;
+	
+	@OneToOne
 	private MisCarteleras misCarteleras;
 	private Long id;
 	

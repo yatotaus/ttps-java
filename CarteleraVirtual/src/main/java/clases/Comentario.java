@@ -1,16 +1,23 @@
 package clases;
+import java.io.Serializable;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="Cometario")
  
 
-public class Comentario {
+public class Comentario implements Serializable {
 	@Id @GeneratedValue
-	 @Column(name="MENSAJE_ID")
+	
+	@OneToOne
 	private Usuario autorComentario;
 	private String texto;
-	private Comentario [ ] respuestas;
+	
+	@OneToMany
+	@JoinColumn(name="Comentario")
+	private Set<Comentario> respuestas;
 	private Long id;
 	
 	public Long getId() {
@@ -33,11 +40,11 @@ public class Comentario {
 		this.texto = texto;
 	}
 	
-	public Comentario[] getRespuestas() {
+	public Set<Comentario> getRespuestas() {
 		return respuestas;
 	}
 	
-	public void setRespuestas(Comentario[] respuestas) {
+	public void setRespuestas(Set<Comentario> respuestas) {
 		this.respuestas = respuestas;
 	}
 	

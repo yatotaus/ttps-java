@@ -1,4 +1,6 @@
 package clases;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,11 +11,11 @@ public class Cartelera {
 	 @Column(name="idCartelera")
 	private Long id;
 
-	@GeneratedValue
 	@Column(name="nombre")
 	private String nombreCartelera;
 	
-	private Publicacion [ ] publicaciones;
+	@OneToMany
+	private Set<Publicacion> publicaciones;
 	
 	private Cartelera [ ] carteleras;
 	public Cartelera() {
@@ -52,11 +54,11 @@ public class Cartelera {
 		this.nombreCartelera = nombreCartelera;
 	}
 
-	public Publicacion[] getPublicaciones() {
+	public Set<Publicacion> getPublicaciones() {
 		return publicaciones;
 	}
 
-	public void setPublicaciones(Publicacion[] publicaciones) {
+	public void setPublicaciones(Set<Publicacion> publicaciones) {
 		this.publicaciones = publicaciones;
 	}
 }
