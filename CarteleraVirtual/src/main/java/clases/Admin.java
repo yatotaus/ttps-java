@@ -2,7 +2,7 @@ package clases;
 import javax.persistence.*;
 
 @Entity
-@Table(name="MENSAJES")
+@Table(name="Usuario")
  
 
 public class Admin extends Usuario{
