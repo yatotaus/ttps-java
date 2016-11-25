@@ -6,8 +6,9 @@ import javax.persistence.*;
  
 
 public class Usuario {
+	@Column(name="MENSAJE_ID")
 	@Id @GeneratedValue
-	 @Column(name="MENSAJE_ID")	
+		
 	private String usuario;
 	private String clave;
 	private Integer rol;

@@ -1,7 +1,13 @@
 package Daos;
 
 import java.io.Serializable;
-import javax.persistence.*;
+//import javax.persistence.*;
+ 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.FlushModeType;
+import javax.persistence.Persistence;
 
 import clases.Cartelera;
 
