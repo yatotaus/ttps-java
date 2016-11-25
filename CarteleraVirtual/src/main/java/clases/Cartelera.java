@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="cartelera")
+
 public class Cartelera {
 	@Id @GeneratedValue
 	 @Column(name="idCartelera")
