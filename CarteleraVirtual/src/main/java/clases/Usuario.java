@@ -14,7 +14,7 @@ public class Usuario {
 	private Integer dni;
 	private String email;
 	
-	@OneToOne
+	@OneToOne(mappedBy="dueño")
 	private MisCarteleras misCarteleras;
 	private Long id;
 	

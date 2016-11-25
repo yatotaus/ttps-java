@@ -1,4 +1,5 @@
 package clases;
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import javax.persistence.*;
 @Table(name="MENSAJES")
  
 
-public class MisCarteleras {
+public class MisCarteleras implements Serializable{
 	@Id @GeneratedValue
 	
 	@OneToOne
