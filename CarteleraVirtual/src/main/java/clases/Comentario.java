@@ -2,7 +2,7 @@ package clases;
 import javax.persistence.*;
 
 @Entity
-@Table(name="MENSAJES")
+@Table(name="Cometario")
  
 
 public class Comentario {
