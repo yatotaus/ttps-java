@@ -7,12 +7,14 @@ import javax.persistence.*;
 
 public class Usuario {
 	@Id @GeneratedValue
-	 @Column(name="MENSAJE_ID")	
+
 	private String usuario;
 	private String clave;
 	private Integer rol;
 	private Integer dni;
 	private String email;
+	
+	@OneToOne
 	private MisCarteleras misCarteleras;
 	private Long id;
 	

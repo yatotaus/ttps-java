@@ -1,4 +1,6 @@
 package clases;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,12 +9,17 @@ import javax.persistence.*;
 
 public class Publicacion {
 	@Id @GeneratedValue
-	 @Column(name="MENSAJE_ID")	
-	private String nombrePublicacion;
-	private Usuario autor;
-	private Comentario [ ] comentarios;
-	private boolean comentariosHab;
 	private Long id;
+	
+	
+	private String nombrePublicacion;
+	
+	@OneToOne
+	private Usuario autor;
+	
+	
+	private Set<Comentario> comentarios;
+	private boolean comentariosHab;
 	public Publicacion() {
 		super();
 	}
@@ -33,11 +40,11 @@ public class Publicacion {
 		this.comentariosHab = comentariosHab;
 	}
 
-	public Comentario[] getComentarios() {
+	public Set<Comentario> getComentarios() {
 		return comentarios;
 	}
 
-	public void setComentarios(Comentario[] comentarios) {
+	public void setComentarios(Set<Comentario> comentarios) {
 		this.comentarios = comentarios;
 	}
 
