@@ -21,6 +21,7 @@
 			<property name="hibernate.connection.username" value="root" />
 			<property name="hibernate.default_schema" value="stock" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.hbm2dd1.auto" value="create"/>
 		</properties>
 	</persistence-unit>
 </persistence>
