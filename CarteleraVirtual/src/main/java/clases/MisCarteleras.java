@@ -1,4 +1,6 @@
 package clases;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,9 +9,14 @@ import javax.persistence.*;
 
 public class MisCarteleras {
 	@Id @GeneratedValue
+	
+	@OneToOne
 	private Usuario dueño;
-	private Cartelera [ ] carteleras;
+	
+	@ManyToMany
+	private Set<Cartelera> carteleras;
 	private Long id;
+	
 	public MisCarteleras() {
 		super();
 	}
@@ -30,11 +37,11 @@ public class MisCarteleras {
 		this.dueño = dueño;
 	}
 	
-	public Cartelera[] getCarteleras() {
+	public Set<Cartelera> getCarteleras() {
 		return carteleras;
 	}
 	
-	public void setCarteleras(Cartelera[] carteleras) {
+	public void setCarteleras(Set<Cartelera> carteleras) {
 		this.carteleras = carteleras;
 	}
 	

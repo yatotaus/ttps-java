@@ -17,7 +17,7 @@ public class Publicacion {
 	@OneToOne
 	private Usuario autor;
 	
-	
+	@ManyToMany
 	private Set<Comentario> comentarios;
 	private boolean comentariosHab;
 	public Publicacion() {
