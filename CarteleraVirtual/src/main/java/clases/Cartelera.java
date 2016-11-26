@@ -1,4 +1,5 @@
 package clases;
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -6,10 +7,15 @@ import javax.persistence.*;
 @Entity
 @Table(name="cartelera")
 
-public class Cartelera {
+public class Cartelera implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
+	
+	@Column(name="idCartelera")
 	@Id @GeneratedValue
-	 @Column(name="idCartelera")
 	private Long id;
+	private boolean comentarios;
 
 	@Column(name="nombre")
 	private String nombreCartelera;
@@ -30,7 +36,6 @@ public class Cartelera {
 		this.id = id;
 	}
 	
-	private boolean comentarios;
 	
 	public boolean getComentarios(){
 		return comentarios;

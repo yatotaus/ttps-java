@@ -1,4 +1,5 @@
 package clases;
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -7,7 +8,10 @@ import javax.persistence.*;
 @Table(name="Publicacion")
  
 
-public class Publicacion {
+public class Publicacion implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
 	@Id @GeneratedValue
 	private Long id;
 	

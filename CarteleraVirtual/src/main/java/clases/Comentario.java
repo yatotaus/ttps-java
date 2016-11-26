@@ -9,8 +9,12 @@ import javax.persistence.*;
  
 
 public class Comentario implements Serializable {
+
+	
+	private static final long serialVersionUID = 1L;
 	@Id @GeneratedValue
 	
+
 	@OneToOne
 	private Usuario autorComentario;
 	private String texto;

@@ -1,11 +1,16 @@
 package clases;
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="Usuario")
  
 
-public class Usuario {
+public class Usuario implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+
 	@Column(name="MENSAJE_ID")
 	@Id @GeneratedValue
 	private String usuario;

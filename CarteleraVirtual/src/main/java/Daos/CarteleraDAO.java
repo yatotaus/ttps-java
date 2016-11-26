@@ -25,7 +25,7 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 		etx.begin();
 		
 		Cartelera c = new Cartelera();
-		c.setNombreCartelera("Soy la primera cartelera");
+		c.setNombreCartelera("Otra cartelera");
 		em.persist(c);
 		etx.commit();
 		em.close();
