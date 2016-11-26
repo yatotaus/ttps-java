@@ -27,6 +27,16 @@ public class Publicacion implements Serializable{
 	public Publicacion() {
 		super();
 	}
+	
+	private String estado="Habilitado";
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 
 	public Long getId() {
 		return id;

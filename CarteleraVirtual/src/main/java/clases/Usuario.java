@@ -18,7 +18,33 @@ public class Usuario implements Serializable {
 	private Integer rol;
 	private Integer dni;
 	private String email;
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public MisCarteleras getMisCarteleras() {
+		return misCarteleras;
+	}
+
+	public void setMisCarteleras(MisCarteleras misCarteleras) {
+		this.misCarteleras = misCarteleras;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	private String estado="Habilitado";
 	
+		
 	@OneToOne(mappedBy="dueño")
 	private MisCarteleras misCarteleras;
 	private Long id;

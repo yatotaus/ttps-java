@@ -21,6 +21,15 @@ public class MisCarteleras implements Serializable{
 	private Set<Cartelera> carteleras;
 	private Long id;
 	
+	private String estado="Habilitado";
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 	public MisCarteleras() {
 		super();
 	}

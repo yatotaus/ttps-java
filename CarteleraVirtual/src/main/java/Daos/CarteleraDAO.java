@@ -27,15 +27,20 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 		Cartelera c = new Cartelera();
 		c.setNombreCartelera("Ayed");
 		c.setId(2);
-		em.merge(c);
+		em.persist(c);
 		etx.commit();
 		em.close();
 	}
 
 	public void actualizar(Class<T> Objeto) {
-		
+		EntityTransaction etx = em.getTransaction();
+		etx.begin();
+		Cartelera c = new Cartelera();
+		c.setNombreCartelera("Ayed");
+		em.merge(c);
+		etx.commit();
+		em.close();
 	}
-
 	public void borrar(Class<T> Objeto) {
 		
 	}

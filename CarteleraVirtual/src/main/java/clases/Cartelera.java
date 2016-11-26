@@ -22,6 +22,15 @@ public class Cartelera implements Serializable{
 	@Column(name="nombre")
 	private String nombreCartelera;
 	
+	private String estado="Hablitado";
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 	@OneToMany
 	private Set<Publicacion> publicaciones;
 	
