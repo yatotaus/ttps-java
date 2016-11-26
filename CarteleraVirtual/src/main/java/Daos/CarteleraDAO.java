@@ -1,14 +1,9 @@
 package Daos;
 
 import java.io.Serializable;
-import javax.persistence.*;
-
-import clases.Cartelera;
 
 public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 	
-
-
 	public void borrar(Class<T> Objeto) {
 		
 	}

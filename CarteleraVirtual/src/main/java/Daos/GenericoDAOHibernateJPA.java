@@ -1,13 +1,8 @@
 package Daos;
 
 import java.io.Serializable;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import Interface.GenericDAO;
-import clases.Cartelera;
 
 public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 
