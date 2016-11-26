@@ -1,6 +1,5 @@
 package clases;
 import java.io.Serializable;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,9 +10,12 @@ public class Usuario implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="MENSAJE_ID")
 	@Id @GeneratedValue
+	@Column(name="idUsuario")
+	private int id;
+	
 	private String usuario;
+	
 	private String clave;
 	private Integer rol;
 	private Integer dni;
@@ -47,7 +49,6 @@ public class Usuario implements Serializable {
 		
 	@OneToOne(mappedBy="dueño")
 	private MisCarteleras misCarteleras;
-	private int id;
 	
 	public Usuario() {
 		super();

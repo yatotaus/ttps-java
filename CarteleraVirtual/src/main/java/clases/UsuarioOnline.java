@@ -1,7 +1,5 @@
 package clases;
-import javax.persistence.*;
 
-@Entity
  
 public class UsuarioOnline extends Usuario {
 	

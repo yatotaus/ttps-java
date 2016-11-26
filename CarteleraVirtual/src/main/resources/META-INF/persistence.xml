@@ -8,9 +8,6 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>clases.Cartelera</class>
 		<class>clases.Usuario</class>
-		<class>clases.UsuarioOnline</class>
-		<class>clases.PublicadorPermisos</class>
-		<class>clases.Admin</class>
 		<class>clases.Publicacion</class>
 		<class>clases.MisCarteleras</class>
 		<class>clases.Comentario</class>
@@ -21,7 +18,7 @@
 			<property name="hibernate.connection.username" value="root" />
 			
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="create"/>
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
 		</properties>
 	</persistence-unit>
 </persistence> 

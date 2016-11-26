@@ -1,7 +1,4 @@
 package clases;
-import javax.persistence.*;
-
-@Entity
  
 public class PublicadorPermisos extends Usuario{
 
