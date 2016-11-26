@@ -10,27 +10,35 @@ import javax.persistence.Persistence;
 import clases.Usuario;
 
 public class UsuarioDAO<T> extends GenericoDAOHibernateJPA<T> {
+
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("juan");
+	EntityManager em = emf.createEntityManager();
 	
 	public void agregar(Usuario cart){
-		
-
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("juan");
-
-		EntityManager em = emf.createEntityManager();
-		
+				
 		EntityTransaction etx = em.getTransaction();
 	
 		etx.begin();
 		
-		Usuario c = new Usuario();
-		c.setUsuario("Pepe");
-		em.persist(c);
+		Usuario user = new Usuario();
+		user.setUsuario("Pepe");
+		em.persist(user);
 		etx.commit();
 		em.close();
 	}
 
 	public void actualizar(Class<T> Objeto) {
 		
+		EntityTransaction etx = em.getTransaction();
+		
+		etx.begin();
+		
+		Usuario user = new Usuario();
+		user.setUsuario("Juan");
+		user.setId(1);
+		em.merge(user);
+		etx.commit();
+		em.close();
 	}
 
 	public void borrar(Class<T> Objeto) {

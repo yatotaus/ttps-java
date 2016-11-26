@@ -34,12 +34,12 @@ public class Usuario implements Serializable {
 		this.misCarteleras = misCarteleras;
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(int i) {
+		this.id = i;
 	}
 
 	private String estado="Habilitado";
@@ -47,7 +47,7 @@ public class Usuario implements Serializable {
 		
 	@OneToOne(mappedBy="dueño")
 	private MisCarteleras misCarteleras;
-	private Long id;
+	private int id;
 	
 	public Usuario() {
 		super();
