@@ -2,7 +2,6 @@ package clases;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Usuario")
  
 public class UsuarioOnline extends Usuario {
 	
