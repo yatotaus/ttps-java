@@ -1,8 +1,13 @@
 package Daos;
 
 import java.io.Serializable;
+//import javax.persistence.*;
  
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.FlushModeType;
+import javax.persistence.Persistence;
 
 import clases.Cartelera;
 
@@ -20,8 +25,7 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 		etx.begin();
 		
 		Cartelera c = new Cartelera();
-		c.setNombreCartelera("Ayed");
-		c.setId(2);
+		c.setNombreCartelera("AyED");
 		em.persist(c);
 		etx.commit();
 		em.close();
@@ -29,13 +33,17 @@ public class CarteleraDAO<T> extends GenericoDAOHibernateJPA<T> {
 
 	public void actualizar(Class<T> Objeto) {
 		EntityTransaction etx = em.getTransaction();
+		
 		etx.begin();
+		
 		Cartelera c = new Cartelera();
-		c.setNombreCartelera("Ayed");
+		c.setNombreCartelera("AyED");
+		c.setId(2);
 		em.merge(c);
 		etx.commit();
 		em.close();
 	}
+
 	public void borrar(Class<T> Objeto) {
 		
 	}
