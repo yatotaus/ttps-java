@@ -22,7 +22,7 @@ public class Comentario implements Serializable {
 	@OneToMany
 	@JoinColumn(name="Comentario")
 	private Set<Comentario> respuestas;
-	private Long id;
+	private int id;
 	
 	private String estado="Habilitado";
 	
@@ -34,11 +34,11 @@ public class Comentario implements Serializable {
 		this.estado = estado;
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

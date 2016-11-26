@@ -11,13 +11,12 @@ import clases.Comentario;
 
 public class ComentarioDAO<T> extends GenericoDAOHibernateJPA<T> {
 	
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("juan");
+
+	EntityManager em = emf.createEntityManager();
+	
 	public void agregar(Comentario cart){
-		
-
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("juan");
-
-		EntityManager em = emf.createEntityManager();
-		
+				
 		EntityTransaction etx = em.getTransaction();
 	
 		etx.begin();
@@ -30,7 +29,16 @@ public class ComentarioDAO<T> extends GenericoDAOHibernateJPA<T> {
 	}
 
 	public void actualizar(Class<T> Objeto) {
+		EntityTransaction etx = em.getTransaction();
 		
+		etx.begin();
+		
+		Comentario c = new Comentario();
+		c.setTexto("Juan");
+		c.setId(1);
+		em.merge(c);
+		etx.commit();
+		em.close();
 	}
 
 	public void borrar(Class<T> Objeto) {
