@@ -12,9 +12,11 @@ public class Cartelera implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	
-	@Column(name="idCartelera")
+	
 	@Id @GeneratedValue
-	private Long id;
+	@Column(name="idCartelera")
+	private int id;
+	
 	private boolean comentarios;
 
 	@Column(name="nombre")
@@ -28,11 +30,11 @@ public class Cartelera implements Serializable{
 		super();
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
