@@ -27,9 +27,6 @@ public class Login extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		CarteleraDAO c = new CarteleraDAO();
-		c.agregar(new Cartelera());
-		
 		String usu, pass;
 		usu = request.getParameter("dni");
         pass = request.getParameter("password");
