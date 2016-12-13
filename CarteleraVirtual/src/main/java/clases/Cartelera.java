@@ -1,5 +1,6 @@
 package clases;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -12,11 +13,13 @@ public class Cartelera implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@OneToMany
-	private Set<Publicacion> publicaciones;
+	private Set<Publicacion> publicaciones = new HashSet<Publicacion>();
 	
 	private Cartelera [ ] carteleras;
 
-	
+	public void agregarPublicacion(Publicacion p){
+		publicaciones.add(p);
+	}
 	@Id @GeneratedValue
 	@Column(name="idCartelera")
 	private int id;

@@ -7,12 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+import Daos.*;
+import clases.*;
+
+
 /**
  * Servlet implementation class PruebaPersistencia
  */
 @WebServlet("/PruebaPersistencia")
 public class PruebaPersistencia extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+    private FactoryDAO fd = new FactoryDAO();
+
 
     public PruebaPersistencia() {
         super();
@@ -21,14 +28,46 @@ public class PruebaPersistencia extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		System.out.println("Comienzo la ejecución");
+		
+		//Instanciación
+		Publicacion publicacion = new Publicacion();
+		Rol r = new Rol();
+		Usuario user = new Usuario();
+		Publicacion p = new Publicacion();
+		Cartelera cartelera = new Cartelera();
+		
+		CarteleraDAO carteleraDao =fd.getCarteleraDAO();
+		PublicacionDAO publiDAO = fd.getPublicacionDAO();
+		UsuarioDAO ud = fd.getUsuarioDAO();
+		
+		//Seteo de parámetros
+		r.setNombre("Usuario online");
+		
+		user.setClave("password");
+		user.setDni(12312312);
+		user.setEmail("juan@prueba.com");
+		
+		publicacion.setAutor(user);
+		publicacion.setNombrePublicacion("Bienvenidos a la cartelera virtual");
+		
+		
+		p.setNombrePublicacion("Esta es la segunda publicacion");
+		
+		cartelera.setNombreCartelera("3°Año");
+		//cartelera.agregarPublicacion(p);
+
+		ud.agregar(user);
+		System.out.println("Ver el error desde acá");
+		carteleraDao.agregar(cartelera);
+		user.setDni(4444);
+		ud.actualizar(user);
+		
+		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
