@@ -21,7 +21,12 @@ public class Publicacion implements Serializable{
 	@OneToOne
 	private Usuario autor;
 	
-	@ManyToMany
+	
+	@ManyToOne
+	private Cartelera cartelera;
+	
+	
+	@OneToMany
 	private Set<Comentario> comentarios;
 	private boolean comentariosHab;
 	public Publicacion() {

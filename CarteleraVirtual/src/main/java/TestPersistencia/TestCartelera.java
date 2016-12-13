@@ -7,27 +7,45 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class TestCartelera
- */
+import Daos.CarteleraDAO;
+import Daos.FactoryDAO;
+import Daos.PublicacionDAO;
+import Daos.UsuarioDAO;
+import clases.Cartelera;
+import clases.Publicacion;
+import clases.Rol;
+import clases.Usuario;
+
 @WebServlet("/TestCartelera")
 public class TestCartelera extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+    private FactoryDAO fd = new FactoryDAO();
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public TestCartelera() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		Publicacion publicacion = new Publicacion();
+		Publicacion p = new Publicacion();
+		Cartelera cartelera = new Cartelera();
+		
+		CarteleraDAO carteleraDao =fd.getCarteleraDAO();
+		PublicacionDAO publiDAO = fd.getPublicacionDAO();
+
+		publicacion.setNombrePublicacion("Bienvenidos a la cartelera virtual");
+		p.setNombrePublicacion("Esta es una publicacion");
+		
+		cartelera.setNombreCartelera("Cartelera antes de irme");
+		cartelera.agregarPublicacion(p);
+
+		carteleraDao.agregar(cartelera);
+		
+		//publiDAO.agregar(publicacion);
+		//publiDAO.agregar(p);
+		
+		
 	}
 
 	/**

@@ -43,7 +43,7 @@ public class PruebaPersistencia extends HttpServlet {
 		UsuarioDAO ud = fd.getUsuarioDAO();
 		
 		//Seteo de parámetros
-		r.setNombre("Usuario online");
+		r.setNombre("Usuario");
 		
 		user.setClave("password");
 		user.setDni(12312312);
@@ -53,16 +53,18 @@ public class PruebaPersistencia extends HttpServlet {
 		publicacion.setNombrePublicacion("Bienvenidos a la cartelera virtual");
 		
 		
-		p.setNombrePublicacion("Esta es la segunda publicacion");
+		p.setNombrePublicacion("Esta es una publicacion");
 		
-		cartelera.setNombreCartelera("3°Año");
-		//cartelera.agregarPublicacion(p);
+		cartelera.setNombreCartelera("Cartelera");
+		cartelera.agregarPublicacion(p);
 
 		ud.agregar(user);
-		System.out.println("Ver el error desde acá");
 		carteleraDao.agregar(cartelera);
 		user.setDni(4444);
 		ud.actualizar(user);
+		publiDAO.agregar(publicacion);
+		publiDAO.agregar(p);
+		
 		
 		
 	}
