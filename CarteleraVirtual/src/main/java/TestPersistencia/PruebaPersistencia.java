@@ -7,34 +7,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Daos.*;
-import clases.*;
-
-@WebServlet("/TestUsuarios")
-public class TestUsuarios extends HttpServlet {
+/**
+ * Servlet implementation class PruebaPersistencia
+ */
+@WebServlet("/PruebaPersistencia")
+public class PruebaPersistencia extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    private FactoryDAO fd = new FactoryDAO();
-    
-    public TestUsuarios() {
+
+    public PruebaPersistencia() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Usuario user = new Usuario();
-		user.setClave("password");
-		user.setDni(12312312);
-		user.setEmail("juan@prueba.com");
-		UsuarioDAO ud = fd.getUsuarioDAO();
-		ud.agregar(user);
-		
-		user.setDni(1234);
-		ud.actualizar(user);
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		doGet(request, response);
-
 	}
 
 }

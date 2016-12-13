@@ -11,7 +11,7 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 	
 	
 	public void agregar(Object cartelera){
-		
+		em = emf.createEntityManager();
 		EntityTransaction etx = em.getTransaction();
 		etx.begin();
 		em.persist(cartelera);
@@ -19,7 +19,8 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		em.close();
 	}
 	
-	public void actualizar(Class<T> objetoPersistible) {
+	public void actualizar(Object objetoPersistible) {
+		em = emf.createEntityManager();
 		EntityTransaction etx = em.getTransaction();
 		etx.begin();
 		em.merge(objetoPersistible);
@@ -44,6 +45,12 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 	}
 
 	public void existe(Class<T> Objeto) {
+		
+	}
+
+	@Override
+	public void actualizar(Class<T> Objeto) {
+		// TODO Auto-generated method stub
 		
 	}
 	
