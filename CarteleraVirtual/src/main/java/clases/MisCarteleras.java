@@ -23,6 +23,8 @@ public class MisCarteleras implements Serializable{
 	private Set<Cartelera> carteleras;
 	
 	private String estado="Habilitado";
+	
+	
 	public String getEstado() {
 		return estado;
 	}

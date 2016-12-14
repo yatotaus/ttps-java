@@ -23,6 +23,54 @@ public class Cartelera implements Serializable{
 	
 	private boolean comentarios;
 
+	@ManyToMany
+	private Set<UsuarioOnline> suscriptores = new HashSet<UsuarioOnline>();
+	
+	@ManyToMany
+	private Set<PublicadorPermisos> participantes  = new HashSet<PublicadorPermisos>();
+	
+	public void agregarSuscriptores(UsuarioOnline u){
+		suscriptores.add(u);
+	}
+	
+	public void agregarParticipantes(PublicadorPermisos u){
+		participantes.add(u);
+	}
+	
+	public Set<UsuarioOnline> getSuscriptores() {
+		return suscriptores;
+	}
+
+
+
+
+
+
+
+	public void setSuscriptores(Set<UsuarioOnline> suscriptores) {
+		this.suscriptores = suscriptores;
+	}
+
+
+
+
+
+
+
+	public Set<PublicadorPermisos> getParticipantes() {
+		return participantes;
+	}
+
+
+
+
+
+
+
+	public void setParticipantes(Set<PublicadorPermisos> participantes) {
+		this.participantes = participantes;
+	}
+
 	@Column(name="nombre")
 	private String nombreCartelera;
 	

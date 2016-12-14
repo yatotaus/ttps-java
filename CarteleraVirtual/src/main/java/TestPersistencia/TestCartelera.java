@@ -33,24 +33,28 @@ public class TestCartelera extends HttpServlet {
 		PublicacionDAO publiDAO = fd.getPublicacionDAO();
 		UsuarioDAO userDao = fd.getUsuarioDAO();
 
-		Usuario user = new Usuario();
+		UsuarioOnline user = new UsuarioOnline();
+		PublicadorPermisos docente = new PublicadorPermisos();
 		Comentario coment = new Comentario();
 		
 		
 		System.out.println("Voy a persistir el comentario");
-		coment.setTexto("No hay posibilidades de agregar una fecha a la tarde para los que trabajamos??");
+		coment.setTexto("Cuando suben las notas de la la segunda fecha??");
 		coment.setAutorComentario(user);
 		System.out.println("ya persistí el comentario");
 		
-		user.setEmail("Usuario comentario");
-		publicacion.setAutor(user);
+		user.setEmail("Usuario online");
+		docente.setEmail("Docente que publica en cartelera");
+		publicacion.setAutor(docente);
 		p.setAutor(user);
-		publicacion.setNombrePublicacion("Esta sería la segunda publicacion persistida automaticamente");
-		p.setNombrePublicacion("Primera publicacion persistida automaticamente");
+		publicacion.setNombrePublicacion("Esta es una publicacion en la cartelera nueva con un suscriptor y un docente publicador ");
+		p.setNombrePublicacion("Otra publicación de la cartelera con suscriptores");
 		p.agregarComentario(coment);
-		cartelera.setNombreCartelera("Cartelera con persistencia automática");
+		cartelera.setNombreCartelera("Cartelera con Suscriptores");
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
+		//cartelera.agregarParticipantes(docente);
+		//cartelera.agregarSuscriptores(user);
 
 		carteleraDao.agregar(cartelera);
 		

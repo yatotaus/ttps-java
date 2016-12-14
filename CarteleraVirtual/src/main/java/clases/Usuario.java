@@ -1,5 +1,8 @@
 package clases;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
@@ -17,7 +20,17 @@ public class Usuario implements Serializable {
 	//Ver mapeo acá
 	private Integer rol;
 
+	@ManyToMany
+	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 	
+	public Set<Cartelera> getCarteleras() {
+		return carteleras;
+	}
+
+	public void setCarteleras(Set<Cartelera> carteleras) {
+		this.carteleras = carteleras;
+	}
+
 	private String usuario;
 	
 	private String clave;

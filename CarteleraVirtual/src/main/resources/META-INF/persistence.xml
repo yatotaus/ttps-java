@@ -11,6 +11,9 @@
 		<class>clases.Publicacion</class>
 		<class>clases.MisCarteleras</class>
 		<class>clases.Comentario</class>
+		<class>clases.UsuarioOnline</class>
+		<class>clases.Admin</class>
+		<class>clases.PublicadorPermisos</class>
 		<class>clases.Rol</class>
 		<properties>
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
