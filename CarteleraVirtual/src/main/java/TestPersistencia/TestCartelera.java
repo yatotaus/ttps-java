@@ -29,21 +29,29 @@ public class TestCartelera extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Publicacion publicacion = new Publicacion();
 		Publicacion p = new Publicacion();
+		
 		Cartelera cartelera = new Cartelera();
 		
 		CarteleraDAO carteleraDao =fd.getCarteleraDAO();
 		PublicacionDAO publiDAO = fd.getPublicacionDAO();
+		UsuarioDAO userDao = fd.getUsuarioDAO();
 
-		publicacion.setNombrePublicacion("Bienvenidos a la cartelera virtual");
-		p.setNombrePublicacion("Esta es una publicacion");
+		Usuario user = new Usuario();
 		
-		cartelera.setNombreCartelera("Cartelera antes de irme");
+		user.setEmail("Este usuario se persistirá 2 veces??");
+		publicacion.setAutor(user);
+		p.setAutor(user);
+		publicacion.setNombrePublicacion("Esta sería la primer publicacion persistida automaticamente");
+		p.setNombrePublicacion("Segunda publicacion persistida automaticamente");
+		
+		userDao.agregar(user);
+		cartelera.setNombreCartelera("Cartelera con persistencia automática");
 		cartelera.agregarPublicacion(p);
+		cartelera.agregarPublicacion(publicacion);
 
 		carteleraDao.agregar(cartelera);
 		
-		//publiDAO.agregar(publicacion);
-		//publiDAO.agregar(p);
+		
 		
 		
 	}

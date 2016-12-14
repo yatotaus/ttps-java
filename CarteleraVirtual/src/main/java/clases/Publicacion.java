@@ -17,23 +17,30 @@ public class Publicacion implements Serializable{
 	
 	
 	private String nombrePublicacion;
+	private String estado="Habilitado";
 	
-	@OneToOne
+	
+	//Bien
+	@OneToOne(cascade=CascadeType.ALL)
 	private Usuario autor;
+	
 	
 	
 	@ManyToOne
 	private Cartelera cartelera;
 	
 	
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private Set<Comentario> comentarios;
 	private boolean comentariosHab;
+	
+	
+	
+	
 	public Publicacion() {
 		super();
 	}
 	
-	private String estado="Habilitado";
 
 	public String getEstado() {
 		return estado;
@@ -81,6 +88,10 @@ public class Publicacion implements Serializable{
 	
 	public void setAutor(Usuario autor) {
 		this.autor = autor;
+	}
+	
+	public void agregarComentario(Comentario c){
+		comentarios.add(c);
 	}
 
 }

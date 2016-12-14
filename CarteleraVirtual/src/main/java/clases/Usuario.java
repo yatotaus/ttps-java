@@ -14,10 +14,13 @@ public class Usuario implements Serializable {
 	@Column(name="idUsuario")
 	private int id;
 	
+	//Ver mapeo acá
+	private Integer rol;
+
+	
 	private String usuario;
 	
 	private String clave;
-	private Integer rol;
 	private Integer dni;
 	private String email;
 	public String getEstado() {

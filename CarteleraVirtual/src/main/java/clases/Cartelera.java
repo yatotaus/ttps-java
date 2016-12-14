@@ -12,14 +12,11 @@ public class Cartelera implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
-	@OneToMany
+	@OneToMany(cascade=CascadeType.ALL)
 	private Set<Publicacion> publicaciones = new HashSet<Publicacion>();
 	
 	private Cartelera [ ] carteleras;
 
-	public void agregarPublicacion(Publicacion p){
-		publicaciones.add(p);
-	}
 	@Id @GeneratedValue
 	@Column(name="idCartelera")
 	private int id;
@@ -31,6 +28,23 @@ public class Cartelera implements Serializable{
 	
 	private String estado="Hablitado";
 	
+	
+	public Cartelera() {
+		super();
+	}
+
+	
+	
+	
+	
+	
+	
+	public void agregarPublicacion(Publicacion p){
+		publicaciones.add(p);
+	}
+
+	
+	
 	public String getEstado() {
 		return estado;
 	}
@@ -38,10 +52,7 @@ public class Cartelera implements Serializable{
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	public Cartelera() {
-		super();
-	}
-
+	
 	public int getId() {
 		return id;
 	}
