@@ -11,10 +11,7 @@ import Daos.CarteleraDAO;
 import Daos.FactoryDAO;
 import Daos.PublicacionDAO;
 import Daos.UsuarioDAO;
-import clases.Cartelera;
-import clases.Publicacion;
-import clases.Rol;
-import clases.Usuario;
+import clases.*;
 
 @WebServlet("/TestCartelera")
 public class TestCartelera extends HttpServlet {
@@ -37,14 +34,20 @@ public class TestCartelera extends HttpServlet {
 		UsuarioDAO userDao = fd.getUsuarioDAO();
 
 		Usuario user = new Usuario();
+		Comentario coment = new Comentario();
 		
-		user.setEmail("Este usuario se persistirá 2 veces??");
+		
+		System.out.println("Voy a persistir el comentario");
+		coment.setTexto("No hay posibilidades de agregar una fecha a la tarde para los que trabajamos??");
+		coment.setAutorComentario(user);
+		System.out.println("ya persistí el comentario");
+		
+		user.setEmail("Usuario comentario");
 		publicacion.setAutor(user);
 		p.setAutor(user);
-		publicacion.setNombrePublicacion("Esta sería la primer publicacion persistida automaticamente");
-		p.setNombrePublicacion("Segunda publicacion persistida automaticamente");
-		
-		userDao.agregar(user);
+		publicacion.setNombrePublicacion("Esta sería la segunda publicacion persistida automaticamente");
+		p.setNombrePublicacion("Primera publicacion persistida automaticamente");
+		p.agregarComentario(coment);
 		cartelera.setNombreCartelera("Cartelera con persistencia automática");
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);

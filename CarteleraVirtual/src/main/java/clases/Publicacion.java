@@ -1,5 +1,6 @@
 package clases;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -31,7 +32,7 @@ public class Publicacion implements Serializable{
 	
 	
 	@OneToMany(cascade=CascadeType.ALL)
-	private Set<Comentario> comentarios;
+	private Set<Comentario> comentarios= new HashSet<Comentario>();;
 	private boolean comentariosHab;
 	
 	
