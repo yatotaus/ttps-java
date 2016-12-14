@@ -15,21 +15,12 @@ public class Usuario implements Serializable {
 
 	@Id @GeneratedValue
 	@Column(name="idUsuario")
-	private int id;
+	private int idUsuario;
 	
 	//Ver mapeo acá
 	private Integer rol;
 
-	@ManyToMany
-	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 	
-	public Set<Cartelera> getCarteleras() {
-		return carteleras;
-	}
-
-	public void setCarteleras(Set<Cartelera> carteleras) {
-		this.carteleras = carteleras;
-	}
 
 	private String usuario;
 	
@@ -53,11 +44,11 @@ public class Usuario implements Serializable {
 	}
 
 	public int getId() {
-		return id;
+		return idUsuario;
 	}
 
 	public void setId(int i) {
-		this.id = i;
+		this.idUsuario = i;
 	}
 
 	private String estado="Habilitado";

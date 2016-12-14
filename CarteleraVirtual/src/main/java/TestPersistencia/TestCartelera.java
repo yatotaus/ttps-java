@@ -53,6 +53,7 @@ public class TestCartelera extends HttpServlet {
 		cartelera.setNombreCartelera("Cartelera con Suscriptores");
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
+		
 		//cartelera.agregarParticipantes(docente);
 		//cartelera.agregarSuscriptores(user);
 

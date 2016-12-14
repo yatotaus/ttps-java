@@ -11,6 +11,7 @@ import javax.persistence.*;
 
 public class Publicacion implements Serializable{
 	
+	//Agregar fecha y hora.
 	private static final long serialVersionUID = 1L;
 
 	@Id @GeneratedValue
