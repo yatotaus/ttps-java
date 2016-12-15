@@ -1,8 +1,6 @@
 package Daos;
 
-import java.io.Serializable;
 import java.util.List;
-
 import javax.persistence.*;
 import Interface.GenericDAO;
 
@@ -63,15 +61,21 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 	
 	*/	
 
-	public void persistir(Class<T> Objeto) {
+	@Override
+	public void persistir(T Objeto) {
+		// TODO Auto-generated method stub
 		
 	}
 
-	public void recuperar(Class<T> Objeto) {
+	@Override
+	public void recuperar(T Objeto) {
+		// TODO Auto-generated method stub
 		
 	}
 
-	public void existe(Class<T> Objeto) {
+	@Override
+	public void existe(T Objeto) {
+		// TODO Auto-generated method stub
 		
 	}
 	
@@ -88,8 +92,6 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		}
 		return resultado.get(0);	
 	}
+
 	
-
-
-
 }
