@@ -24,55 +24,21 @@ public class Cartelera implements Serializable{
 	private boolean comentarios;
 
 	@ManyToMany
-	private Set<Usuario> suscriptores = new HashSet<Usuario>();
+	private Set<Usuario> participantes = new HashSet<Usuario>();
 	
-	//OJO ACÄ. VER------------------------------------------------------------------------------------------
-	
-	/*
-	@ManyToMany
-	private Set<PublicadorPermisos> participantes  = new HashSet<PublicadorPermisos>();
-	
-	public void setParticipantes(Set<PublicadorPermisos> participantes) {
-		this.participantes = participantes;
-	}
-
-			public Set<PublicadorPermisos> getParticipantes() {
-		return participantes;
-	}
-
-		public void agregarParticipantes(PublicadorPermisos u){
-		participantes.add(u);
-	}
-
-	//FIN DEL VER----------------------------------------------------------------------------------------
-	*/
 	
 	public void agregarSuscriptores(Usuario u){
-		suscriptores.add(u);
+		participantes.add(u);
 	}
 	
 	
 	public Set<Usuario> getSuscriptores() {
-		return suscriptores;
+		return participantes;
 	}
 
 	public void setSuscriptores(Set<Usuario> suscriptores) {
-		this.suscriptores = suscriptores;
+		this.participantes = suscriptores;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	@Column(name="nombre")
 	private String nombreCartelera;
@@ -84,12 +50,6 @@ public class Cartelera implements Serializable{
 		super();
 	}
 
-	
-	
-	
-	
-	
-	
 	public void agregarPublicacion(Publicacion p){
 		publicaciones.add(p);
 	}
