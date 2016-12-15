@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Daos.CarteleraDAO;
+import Daos.ComentarioDAO;
 import Daos.FactoryDAO;
 import Daos.PublicacionDAO;
 import Daos.UsuarioDAO;
@@ -32,11 +33,14 @@ public class TestCartelera extends HttpServlet {
 		CarteleraDAO carteleraDao =fd.getCarteleraDAO();
 		PublicacionDAO publiDAO = fd.getPublicacionDAO();
 		UsuarioDAO userDao = fd.getUsuarioDAO();
+		ComentarioDAO comentDAO = fd.getComentarioDAO();
 
 		UsuarioOnline user = new UsuarioOnline();
 		PublicadorPermisos docente = new PublicadorPermisos();
 		Comentario coment = new Comentario();
-		
+		Comentario com = new Comentario();
+		Comentario comm = new Comentario();
+		Comentario comBorrado = new Comentario();
 		
 		coment.setTexto("Cuando suben las notas de la la segunda fecha??");
 		coment.setAutorComentario(user);		
@@ -57,6 +61,17 @@ public class TestCartelera extends HttpServlet {
 
 		carteleraDao.agregar(cartelera);
 		
+		com.setTexto("Comentario que queda");
+
+		
+
+		comm.setTexto("Quedate comentario");
+		comBorrado.setTexto("Comentario que se borra");
+		
+		comentDAO.agregar(com);
+		comentDAO.agregar(comm);
+		comentDAO.agregar(comBorrado);
+		comentDAO.eliminar(comBorrado);
 		
 		
 		
