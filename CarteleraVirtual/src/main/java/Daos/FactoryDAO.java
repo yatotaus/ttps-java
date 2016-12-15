@@ -41,4 +41,8 @@ public class FactoryDAO {
 	public UsuarioDAO getUsuarioDAO(){
 		return new UsuarioDAO();
 	}
+	
+	public ComentarioDAO getComentarioDAO(){
+		return new ComentarioDAO();
+	}
 }

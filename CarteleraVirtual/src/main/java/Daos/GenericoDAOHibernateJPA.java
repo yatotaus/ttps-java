@@ -28,6 +28,28 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		em.close();
 	}
 
+	
+	public void eliminar(T entity) {
+		em = emf.createEntityManager();
+		EntityTransaction etx = em.getTransaction();
+		etx.begin();
+		em.remove(em.merge(entity));
+		etx.commit();
+		em.close();		
+		
+	}
+
+	/*
+	public T eliminar(Long id) {
+		T entity = MiEntityManagerFactory.getEMF().createEntityManager().find(this.getPersistentClass(), id);
+		if (entity != null) {
+			this.eliminar(entity);
+		}
+		return entity;
+	}
+	
+	*/	
+	
 	public void borrar(Class<T> Objeto) {
 		
 	}
