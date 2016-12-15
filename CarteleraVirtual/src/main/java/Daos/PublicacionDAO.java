@@ -1,5 +1,8 @@
 package Daos;
 
-public class PublicacionDAO<T> extends GenericoDAOHibernateJPA<T>{
+import clases.Publicacion;
+import Interface.GenericDAO;
+
+public interface PublicacionDAO extends GenericDAO<Publicacion>{
 
 }

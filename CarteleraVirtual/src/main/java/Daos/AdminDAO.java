@@ -1,5 +1,8 @@
 package Daos;
 
-public class AdminDAO<T> extends GenericoDAOHibernateJPA<T> {
+import clases.Admin;
+import Interface.GenericDAO;
+
+public interface AdminDAO extends GenericDAO<Admin> {
 
 }

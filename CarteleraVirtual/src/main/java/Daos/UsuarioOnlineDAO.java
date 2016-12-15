@@ -1,5 +1,8 @@
 package Daos;
 
-public class UsuarioOnlineDAO<T> extends GenericoDAOHibernateJPA<T> {
+import clases.UsuarioOnline;
+import Interface.GenericDAO;
+
+public interface UsuarioOnlineDAO extends GenericDAO<UsuarioOnline> {
 
 }

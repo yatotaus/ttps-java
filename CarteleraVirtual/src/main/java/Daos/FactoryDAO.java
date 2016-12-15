@@ -1,47 +1,57 @@
 package Daos;
 
 import Daos.CarteleraDAO;
-/*
- * import clasesDAO.ComponenteDAO;
+import Daos.UsuarioDAO;
+import Daos.AdminDAO;
+import Daos.ComentarioDAO;
+import Daos.MisCartelerasDAO;
+import Daos.PublicacionDAO;
 
-import clasesDAOHiberJPA.ComponenteDAOHiberJPA;
-*/
+import clasesDAOHiberJPA.CarteleraDAOHiberJPA;
+import clasesDAOHiberJPA.UsuarioDAOHiberJPA;
+import clasesDAOHiberJPA.AdminDAOHiberJPA;
+import clasesDAOHiberJPA.ComentarioDAOHiberJPA;
+import clasesDAOHiberJPA.MisCartelerasDAOHiberJPA;
+import clasesDAOHiberJPA.PublicacionDAOHiberJPA;
+
 
 public class FactoryDAO {
-	//private static ComponenteDAOHiberJPA componenteDAOHiberJPA = new ComponenteDAOHiberJPA();
 	
-	/*
-	public static ComponenteDAO getComponenteDAO(){
-		return componenteDAOHiberJPA;
+	private static CarteleraDAOHiberJPA carteleraDAOHiberJPA = new CarteleraDAOHiberJPA();  
+	private static UsuarioDAOHiberJPA usuarioDAOHiberJPA = new UsuarioDAOHiberJPA();
+	private static AdminDAOHiberJPA adminDAOHiberJPA = new AdminDAOHiberJPA();
+	private static ComentarioDAOHiberJPA comentarioDAOHiberJPA = new ComentarioDAOHiberJPA();
+	private static MisCartelerasDAOHiberJPA miscartelerasDAOHiberJPA = new MisCartelerasDAOHiberJPA();
+	private static PublicacionDAOHiberJPA publicacionDAOHiberJPA = new PublicacionDAOHiberJPA();
+	
+	public FactoryDAO() {		
 	}
-	*/
 	
-
 	public ComentarioDAO getUsuariosOnlineDAO(){
-		return new ComentarioDAO();
+		return (ComentarioDAO) comentarioDAOHiberJPA;
 	}
 	
 	public AdminDAO getUsuarioAdminDAO(){
-		return new AdminDAO();
+		return (AdminDAO) adminDAOHiberJPA;
 	}
 	
-	public CarteleraDAO getCarteleraDAO(){
-		return new CarteleraDAO();
+	public static CarteleraDAO getCarteleraDAO(){
+		return (CarteleraDAO) carteleraDAOHiberJPA;
 	}
 	
 	public MisCartelerasDAO getMisCartelerasDAO(){
-		return new MisCartelerasDAO();
+		return (MisCartelerasDAO) miscartelerasDAOHiberJPA;
 	}
 	
 	public PublicacionDAO getPublicacionDAO(){
-		return new PublicacionDAO();
+		return (PublicacionDAO) publicacionDAOHiberJPA;
 	}
 	
-	public UsuarioDAO getUsuarioDAO(){
-		return new UsuarioDAO();
+	public static UsuarioDAO getUsuarioDAO(){
+		return (UsuarioDAO) usuarioDAOHiberJPA;
 	}
 	
 	public ComentarioDAO getComentarioDAO(){
-		return new ComentarioDAO();
+		return (ComentarioDAO) comentarioDAOHiberJPA;
 	}
 }

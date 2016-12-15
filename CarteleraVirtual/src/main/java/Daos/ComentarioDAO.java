@@ -1,27 +1,10 @@
 package Daos;
 
-import java.io.Serializable;
+import clases.Comentario;
+import Interface.GenericDAO;
 
-public class ComentarioDAO<T> extends GenericoDAOHibernateJPA<T> {
+public interface ComentarioDAO extends GenericDAO<Comentario> {
 	
-	public void borrar(Class<T> Objeto) {
-		
-	}
 
-	public void borrar(Serializable Objeto) {
-		
-	}
-
-	public void persistir(Class<T> Objeto) {
-		
-	}
-
-	public void recuperar(Class<T> Objeto) {
-		
-	}
-
-	public void existe(Class<T> Objeto) {
-		
-	}
 	
 }

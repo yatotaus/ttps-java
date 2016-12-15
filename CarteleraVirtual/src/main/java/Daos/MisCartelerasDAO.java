@@ -1,8 +1,9 @@
 package Daos;
 
-//import java.io.Serializable;
+import clases.MisCarteleras;
+import Interface.GenericDAO;
 
-public class MisCartelerasDAO<T> extends GenericoDAOHibernateJPA<T>{
+public interface MisCartelerasDAO extends GenericDAO<MisCarteleras>{
 	
 
 }

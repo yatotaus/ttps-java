@@ -1,4 +1,4 @@
-package Daos;
+package clasesDAOHiberJPA;
 
 import java.util.List;
 import javax.persistence.*;

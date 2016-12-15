@@ -1,20 +1,21 @@
 package Daos;
 
-import clases.*;
+import clases.Rol;
+import Interface.GenericDAO;
 
-public class RolDAO<T> extends GenericoDAOHibernateJPA<T>{
-
+public interface RolDAO extends GenericDAO<Rol>{
+/*
 	public Rol buscar(int idRol){
 		
 		return new Rol();
 	}
 	
-	public Rol buscar(String nombre){
+	public T buscar(String nombre){
 		Rol r = new Rol();
 		r.setNombre(nombre);
 		this.agregar(r);
-		return r;
+		return (T) r;
 		
 	}
-	
+	*/
 }
