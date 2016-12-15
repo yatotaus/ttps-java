@@ -10,8 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import Daos.CarteleraDAO;
 import Daos.ComentarioDAO;
 import Daos.FactoryDAO;
+/*
 import Daos.PublicacionDAO;
 import Daos.UsuarioDAO;
+*/
 import clases.*;
 
 @WebServlet("/TestCartelera")
@@ -31,10 +33,12 @@ public class TestCartelera extends HttpServlet {
 		
 		Cartelera cartelera = new Cartelera();
 		
-		CarteleraDAO carteleraDao =fd.getCarteleraDAO();
-		PublicacionDAO publiDAO = fd.getPublicacionDAO();
-		UsuarioDAO userDao = fd.getUsuarioDAO();
-		ComentarioDAO<Comentario> comentDAO = fd.getComentarioDAO();
+		CarteleraDAO carteleraDao = FactoryDAO.getCarteleraDAO();
+		/*
+		 * PublicacionDAO publiDAO = fd.getPublicacionDAO();
+		 * UsuarioDAO userDao = fd.getUsuarioDAO();
+		 */
+		ComentarioDAO comentDAO = fd.getComentarioDAO();
 
 		UsuarioOnline user = new UsuarioOnline();
 		PublicadorPermisos docente = new PublicadorPermisos();
@@ -56,7 +60,6 @@ public class TestCartelera extends HttpServlet {
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
 		
-		
 		cartelera.agregarSuscriptores(docente);
 		cartelera.agregarSuscriptores(user);
 
@@ -64,8 +67,7 @@ public class TestCartelera extends HttpServlet {
 		
 		com.setTexto("Comentario que queda");
 
-		
-
+	
 		comm.setTexto("Quedate comentario");
 		comBorrado.setTexto("Comentario que se borra");
 		
@@ -73,8 +75,6 @@ public class TestCartelera extends HttpServlet {
 		comentDAO.agregar(comm);
 		comentDAO.agregar(comBorrado);
 		comentDAO.eliminar(comBorrado);
-		
-		
 		
 	}
 
