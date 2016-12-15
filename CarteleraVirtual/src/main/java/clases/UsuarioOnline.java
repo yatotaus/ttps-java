@@ -4,8 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
+/*
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+*/
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -13,6 +15,11 @@ import javax.persistence.ManyToMany;
 public class UsuarioOnline extends Usuario {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public UsuarioOnline(String usuario, String clave, Integer rol) {
 		super(usuario, clave, rol);
 	}

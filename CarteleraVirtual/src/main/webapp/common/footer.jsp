@@ -5,8 +5,7 @@
 <footer class="w3-center w3-black w3-padding-16 w3-opacity w3-hover-opacity-off">
   <div class="w3-xlarge w3-padding-32">
     <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
-    <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
-     <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
     <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
     <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
   </div>

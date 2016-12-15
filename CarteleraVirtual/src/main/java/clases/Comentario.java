@@ -1,6 +1,6 @@
 package clases;
 import java.io.Serializable;
-import java.sql.Date;
+//import java.sql.Date;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -32,12 +32,9 @@ public class Comentario implements Serializable {
 	private Comentario respondeA;
 	
 	
-	
-	
 	public void agregarRespuesta(Comentario respuesta){
 		respuestas.add(respuesta);
 	}
-	
 	
 	public String getEstado() {
 		return estado;

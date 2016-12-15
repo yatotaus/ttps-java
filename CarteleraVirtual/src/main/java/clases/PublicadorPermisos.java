@@ -4,12 +4,19 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
+/*
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+*/
 import javax.persistence.ManyToMany;
 
 @Entity
 public class PublicadorPermisos extends Usuario{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public PublicadorPermisos(String usuario, String clave, Integer rol) {
 		super(usuario, clave, rol);

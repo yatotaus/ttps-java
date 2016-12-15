@@ -1,8 +1,9 @@
 package clases;
 import java.io.Serializable;
+/*
 import java.util.HashSet;
 import java.util.Set;
-
+*/
 import javax.persistence.*;
 
 @Entity
@@ -19,14 +20,11 @@ public class Usuario implements Serializable {
 	
 	//Ver mapeo acá
 	private Integer rol;
-
-	
-
 	private String usuario;
-	
 	private String clave;
 	private Integer dni;
 	private String email;
+	
 	public String getEstado() {
 		return estado;
 	}
