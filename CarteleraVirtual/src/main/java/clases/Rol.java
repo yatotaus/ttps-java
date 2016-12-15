@@ -16,7 +16,8 @@ public class Rol implements Serializable{
 	private int id;
 	
 	private String nombre;
-
+	
+	
 	public int getId() {
 		return id;
 	}

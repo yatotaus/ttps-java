@@ -24,11 +24,4 @@ public class Admin extends Usuario{
 		// TODO Auto-generated constructor stub
 	}
 
-	public void eliminarCartelera(Cartelera car){
-		
-	}
-	
-	public void modificarCartelera(Cartelera car){
-		
-	}
 }

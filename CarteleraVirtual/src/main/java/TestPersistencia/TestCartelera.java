@@ -38,11 +38,8 @@ public class TestCartelera extends HttpServlet {
 		Comentario coment = new Comentario();
 		
 		
-		System.out.println("Voy a persistir el comentario");
 		coment.setTexto("Cuando suben las notas de la la segunda fecha??");
-		coment.setAutorComentario(user);
-		System.out.println("ya persistí el comentario");
-		
+		coment.setAutorComentario(user);		
 		user.setEmail("Usuario online");
 		docente.setEmail("Docente que publica en cartelera");
 		publicacion.setAutor(docente);
@@ -54,8 +51,9 @@ public class TestCartelera extends HttpServlet {
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
 		
-		//cartelera.agregarParticipantes(docente);
-		//cartelera.agregarSuscriptores(user);
+		
+		cartelera.agregarSuscriptores(docente);
+		cartelera.agregarSuscriptores(user);
 
 		carteleraDao.agregar(cartelera);
 		

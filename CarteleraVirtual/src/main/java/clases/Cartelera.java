@@ -24,10 +24,11 @@ public class Cartelera implements Serializable{
 	private boolean comentarios;
 
 	@ManyToMany
-	private Set<UsuarioOnline> suscriptores = new HashSet<UsuarioOnline>();
+	private Set<Usuario> suscriptores = new HashSet<Usuario>();
 	
 	//OJO ACÄ. VER------------------------------------------------------------------------------------------
 	
+	/*
 	@ManyToMany
 	private Set<PublicadorPermisos> participantes  = new HashSet<PublicadorPermisos>();
 	
@@ -44,18 +45,18 @@ public class Cartelera implements Serializable{
 	}
 
 	//FIN DEL VER----------------------------------------------------------------------------------------
+	*/
 	
-	
-	public void agregarSuscriptores(UsuarioOnline u){
+	public void agregarSuscriptores(Usuario u){
 		suscriptores.add(u);
 	}
 	
 	
-	public Set<UsuarioOnline> getSuscriptores() {
+	public Set<Usuario> getSuscriptores() {
 		return suscriptores;
 	}
 
-	public void setSuscriptores(Set<UsuarioOnline> suscriptores) {
+	public void setSuscriptores(Set<Usuario> suscriptores) {
 		this.suscriptores = suscriptores;
 	}
 
