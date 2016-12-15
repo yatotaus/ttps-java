@@ -9,7 +9,7 @@ import clasesDAOHiberJPA.ComponenteDAOHiberJPA;
 
 public class FactoryDAO {
 	//private static ComponenteDAOHiberJPA componenteDAOHiberJPA = new ComponenteDAOHiberJPA();
-	private static 
+	
 	
 	/*
 	public static ComponenteDAO getComponenteDAO(){
