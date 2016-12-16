@@ -3,6 +3,7 @@ package clases;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 /*
 import javax.persistence.JoinColumn;
@@ -13,10 +14,11 @@ import javax.persistence.ManyToMany;
 @Entity
 public class PublicadorPermisos extends Usuario{
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
+	
+	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 
 	public PublicadorPermisos(String usuario, String clave, Integer rol) {
 		super(usuario, clave, rol);
@@ -25,8 +27,6 @@ public class PublicadorPermisos extends Usuario{
 	
 	 
 
-	@ManyToMany
-	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 	
 	public Set<Cartelera> getCarteleras() {
 		return carteleras;
