@@ -73,10 +73,10 @@ public class Cartelera implements Serializable{
 	
 	
 	public boolean getComentarios(){
-		return comentarios;
+		return comentarios; 
 	}
 	public void setComentarios(boolean coment){
-		comentarios = coment;
+		comentarios = coment; 
 	}
 
 	public String getNombreCartelera() {
