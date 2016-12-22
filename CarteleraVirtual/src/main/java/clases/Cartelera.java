@@ -15,7 +15,17 @@ public class Cartelera implements Serializable{
 	@OneToMany(cascade=CascadeType.ALL)
 	private Set<Publicacion> publicaciones = new HashSet<Publicacion>();
 	
-	private Cartelera [ ] carteleras;
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@JoinTable(name = "SubCarteleras",
+	joinColumns = @JoinColumn(name = "idCarteleraPadre"),
+	inverseJoinColumns = @JoinColumn(name="idCarteleraHija") )
+	private Set<Cartelera> carteleras = new HashSet<Cartelera>();
+
+	@Column(name="nombre")
+	private String nombreCartelera;
+	
+	private String estado="Hablitado";
+	
 
 	@Id @GeneratedValue
 	@Column(name="idCartelera")
@@ -40,11 +50,6 @@ public class Cartelera implements Serializable{
 		this.participantes = suscriptores;
 	}
 
-	@Column(name="nombre")
-	private String nombreCartelera;
-	
-	private String estado="Hablitado";
-	
 	
 	public Cartelera() {
 		super();
@@ -79,11 +84,11 @@ public class Cartelera implements Serializable{
 	public void setComentarios(boolean coment){
 		comentarios = coment;
 	}
-	public Cartelera[] getCarteleras() {
+	public Set<Cartelera> getCarteleras() {
 		return carteleras;
 	}
 
-	public void setCarteleras(Cartelera[] carteleras) {
+	public void setCarteleras(Set<Cartelera> carteleras) {
 		this.carteleras = carteleras;
 	}
 
@@ -101,5 +106,11 @@ public class Cartelera implements Serializable{
 
 	public void setPublicaciones(Set<Publicacion> publicaciones) {
 		this.publicaciones = publicaciones;
+	}
+
+
+	public void agregarCartelera(Cartelera cartelera) {
+		carteleras.add(cartelera);
+		
 	}
 }
