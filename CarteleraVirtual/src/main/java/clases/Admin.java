@@ -5,7 +5,10 @@ import javax.persistence.*;
 @Entity
 public class Admin extends Usuario{
 	
-
+	
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
 
 	public Admin(String usuario, String clave, Integer rol) {
@@ -18,6 +21,7 @@ public class Admin extends Usuario{
 	
 	public Admin() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
 }
