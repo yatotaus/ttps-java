@@ -4,7 +4,6 @@ import javax.persistence.*;
  
 @Entity
 public class Admin extends Usuario{
-	
 
 	private static final long serialVersionUID = 1L;
 

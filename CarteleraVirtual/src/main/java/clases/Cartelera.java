@@ -12,20 +12,18 @@ public class Cartelera implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
-	@Column(name="nombre")
-	private String nombreCartelera;
-	
-	private String estado="Hablitado";
 	@OneToMany(cascade=CascadeType.ALL)
 	private Set<Publicacion> publicaciones = new HashSet<Publicacion>();
 	
+	private Cartelera [ ] carteleras;
+
 	@Id @GeneratedValue
 	@Column(name="idCartelera")
 	private int id;
 	
 	private boolean comentarios;
 
-	@ManyToMany(cascade=CascadeType.ALL)
+	@ManyToMany
 	private Set<Usuario> participantes = new HashSet<Usuario>();
 	
 	
@@ -42,7 +40,10 @@ public class Cartelera implements Serializable{
 		this.participantes = suscriptores;
 	}
 
+	@Column(name="nombre")
+	private String nombreCartelera;
 	
+	private String estado="Hablitado";
 	
 	
 	public Cartelera() {
@@ -73,10 +74,17 @@ public class Cartelera implements Serializable{
 	
 	
 	public boolean getComentarios(){
-		return comentarios; 
+		return comentarios;
 	}
 	public void setComentarios(boolean coment){
-		comentarios = coment; 
+		comentarios = coment;
+	}
+	public Cartelera[] getCarteleras() {
+		return carteleras;
+	}
+
+	public void setCarteleras(Cartelera[] carteleras) {
+		this.carteleras = carteleras;
 	}
 
 	public String getNombreCartelera() {

@@ -1,4 +1,3 @@
-
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
@@ -9,6 +8,7 @@
 		<class>clases.Cartelera</class>
 		<class>clases.Usuario</class>
 		<class>clases.Publicacion</class>
+		<class>clases.MisCarteleras</class>
 		<class>clases.Comentario</class>
 		<class>clases.UsuarioOnline</class>
 		<class>clases.Admin</class>
@@ -21,7 +21,7 @@
 			<property name="hibernate.connection.username" value="root" />
 			
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			<property name="hibernate.hbm2ddl.auto" value="create"/>
 		</properties>
 	</persistence-unit>
 </persistence> 
