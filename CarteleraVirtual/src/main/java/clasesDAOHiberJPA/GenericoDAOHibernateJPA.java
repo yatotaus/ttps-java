@@ -50,16 +50,16 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		
 	}
 
-	/*
-	public T eliminar(Long id) {
-		T entity = MiEntityManagerFactory.getEMF().createEntityManager().find(this.getPersistentClass(), id);
+	
+	public T eliminar(int id) {
+		T entity = emf.createEntityManager().find(this.getPersistentClass(), id);
 		if (entity != null) {
 			this.eliminar(entity);
 		}
 		return entity;
 	}
 	
-	*/	
+		
 
 	@Override
 	public void persistir(T Objeto) {
