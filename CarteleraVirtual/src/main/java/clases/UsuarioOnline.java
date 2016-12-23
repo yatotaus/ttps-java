@@ -17,7 +17,7 @@ public class UsuarioOnline extends Usuario {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+	@ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
 	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 
 	public UsuarioOnline(String usuario, String clave, Integer rol) {

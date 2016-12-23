@@ -17,7 +17,7 @@ public class Comentario implements Serializable {
 	private int id;
 
 
-	@OneToOne(cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+	@OneToOne(cascade={CascadeType.PERSIST,CascadeType.MERGE})
 	private Usuario autorComentario;
 	private String texto;
 	

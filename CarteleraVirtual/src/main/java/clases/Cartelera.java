@@ -6,7 +6,7 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name="cartelera")
+@Table(name="Cartelera")
 
 public class Cartelera implements Serializable{
 	

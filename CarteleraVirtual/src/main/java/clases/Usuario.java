@@ -24,7 +24,10 @@ public class Usuario implements Serializable {
 	private String email;
 	private String estado="Habilitado";
 	
-
+	public Usuario() {
+		super();
+	}
+	
 	public String getEstado() {
 		return estado;
 	}
@@ -40,11 +43,6 @@ public class Usuario implements Serializable {
 
 	public void setId(int i) {
 		this.idUsuario = i;
-	}
-
-	
-	public Usuario() {
-		super();
 	}
 
 	public Usuario(String usuario, String clave,Integer rol) {

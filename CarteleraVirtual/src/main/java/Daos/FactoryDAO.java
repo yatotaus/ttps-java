@@ -1,7 +1,6 @@
 package Daos;
 
 import Daos.*;
-
 import clasesDAOHiberJPA.*;
 
 public class FactoryDAO {

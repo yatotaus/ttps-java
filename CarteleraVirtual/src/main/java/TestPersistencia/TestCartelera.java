@@ -48,18 +48,22 @@ public class TestCartelera extends HttpServlet {
 		Comentario comBorrado = new Comentario();
 		
 		coment.setTexto("Cuando suben las notas de la la segunda fecha??");
-		coment.setAutorComentario(user);		
+		coment.setAutorComentario(user);	
+
 		user.setEmail("Usuario online");
+		
 		docente.setEmail("Docente que publica en cartelera");
+		
 		publicacion.setAutor(docente);
-		p.setAutor(user);
 		publicacion.setNombrePublicacion("Esta es una publicacion en la cartelera nueva con un suscriptor y un docente publicador ");
+
+		p.setAutor(user);
 		p.setNombrePublicacion("Otra publicación de la cartelera con suscriptores");
 		p.agregarComentario(coment);
+		
 		cartelera.setNombreCartelera("Cartelera con Suscriptores");
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
-		
 		cartelera.agregarSuscriptores(docente);
 		cartelera.agregarSuscriptores(user);
 
@@ -67,8 +71,8 @@ public class TestCartelera extends HttpServlet {
 		
 		com.setTexto("Comentario que queda");
 
-	
 		comm.setTexto("Quedate comentario");
+		
 		comBorrado.setTexto("Comentario que se borra");
 		
 		comentDAO.agregar(com);
@@ -79,7 +83,6 @@ public class TestCartelera extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
