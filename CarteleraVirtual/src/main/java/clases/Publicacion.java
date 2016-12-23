@@ -23,12 +23,12 @@ public class Publicacion implements Serializable{
 	
 	
 	//Bien
-	@OneToOne(cascade={CascadeType.PERSIST,CascadeType.MERGE})
+	@OneToOne(cascade=CascadeType.ALL)
 	private Usuario autor;
 	
 	
 	
-	@ManyToOne (cascade={CascadeType.PERSIST,CascadeType.MERGE})
+	@ManyToOne
 	private Cartelera cartelera;
 	
 	

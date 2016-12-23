@@ -14,7 +14,6 @@ import clases.*;
 
 @WebServlet("/TestComentario")
 public class TestComentario extends HttpServlet {
-	
 	private static final long serialVersionUID = 1L;
     private FactoryDAO fd = new FactoryDAO();
 
@@ -31,9 +30,9 @@ public class TestComentario extends HttpServlet {
 		Usuario dejar = new Admin();
 		
 		
-		eliminarId.setEmail("Usuario QUEse se va a eliminar por id");
-		eliminarEntidad.setEmail("Usuario QUE se se va a eliminar por entidad");
-		dejar.setEmail("Usuario QUEque no se borra");
+		eliminarId.setEmail("Usuario se se va a eliminar por id");
+		eliminarEntidad.setEmail("Usuario se se va a eliminar por entidad");
+		dejar.setEmail("Usuario que no se borra");
 		
 		userDAO.agregar(eliminarEntidad);
 		userDAO.agregar(dejar);
@@ -45,7 +44,7 @@ public class TestComentario extends HttpServlet {
 		
 		
 		
-		response.getWriter().append("Termine el test");
+		response.getWriter().append("Terminé el test");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

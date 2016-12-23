@@ -23,6 +23,7 @@ public class PruebaPersistencia extends HttpServlet {
 
     public PruebaPersistencia() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	

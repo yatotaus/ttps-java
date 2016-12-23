@@ -49,38 +49,41 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		em.close();		
 		
 	}
+
 	
 	public T eliminar(int id) {
-		T entity = emf.createEntityManager().find(this.getPersistentClass(), id);
+		T entity = (T) emf.createEntityManager().find(this.getPersistentClass(), id);
 		if (entity != null) {
 			this.eliminar(entity);
 		}
 		return entity;
 	}
 	
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<T> listado() {
 		
-		Query consulta = emf.createEntityManager().createQuery("select e from " + getPersistentClass().getSimpleName()+ " e");
-		List<T> resultado = (List<T>) consulta.getResultList();
-		return resultado;
-	}
-	
+
 	@Override
-	public T buscar(Long id) {
-		T entity = emf.createEntityManager().find(this.getPersistentClass(), id);
-		if (entity != null) {
-			return entity;
-		}
-		return null;
+	public void persistir(T Objeto) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
+	public void recuperar(T Objeto) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void existe(T Objeto) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public T buscar(String nombre) {
 		System.out.print(getPersistentClass().getSimpleName());
-		Query consulta= emf.createEntityManager().createQuery("select e from " +
+		Query consulta= em.createQuery("select e from " +
 				getPersistentClass().getSimpleName()+" e where e.nombre = :nombre");
 		consulta.setParameter("nombre", nombre);
 		List<T> resultado = (List<T>)consulta.getResultList();
@@ -88,21 +91,6 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 			return null;
 		}
 		return resultado.get(0);	
-	}
-	
-	@Override
-	public void persistir(T Objeto) {
-		
-	}
-
-	@Override
-	public void recuperar(T Objeto) {
-		
-	}
-
-	@Override
-	public void existe(T Objeto) {
-		
 	}
 
 	

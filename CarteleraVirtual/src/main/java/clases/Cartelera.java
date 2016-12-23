@@ -6,26 +6,34 @@ import java.util.Set;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Cartelera")
+@Table(name="cartelera")
 
 public class Cartelera implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
+	@OneToMany(cascade=CascadeType.ALL)
+	private Set<Publicacion> publicaciones = new HashSet<Publicacion>();
+	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@JoinTable(name = "SubCarteleras",
+	joinColumns = @JoinColumn(name = "idCarteleraPadre"),
+	inverseJoinColumns = @JoinColumn(name="idCarteleraHija") )
+	private Set<Cartelera> carteleras = new HashSet<Cartelera>();
+
 	@Column(name="nombre")
 	private String nombreCartelera;
 	
 	private String estado="Hablitado";
-	@OneToMany(cascade=CascadeType.ALL)
-	private Set<Publicacion> publicaciones = new HashSet<Publicacion>();
 	
+
 	@Id @GeneratedValue
 	@Column(name="idCartelera")
 	private int id;
 	
 	private boolean comentarios;
 
-	@ManyToMany(cascade=CascadeType.ALL)
+	@ManyToMany
 	private Set<Usuario> participantes = new HashSet<Usuario>();
 	
 	
@@ -42,8 +50,6 @@ public class Cartelera implements Serializable{
 		this.participantes = suscriptores;
 	}
 
-	
-	
 	
 	public Cartelera() {
 		super();
@@ -78,6 +84,13 @@ public class Cartelera implements Serializable{
 	public void setComentarios(boolean coment){
 		comentarios = coment;
 	}
+	public Set<Cartelera> getCarteleras() {
+		return carteleras;
+	}
+
+	public void setCarteleras(Set<Cartelera> carteleras) {
+		this.carteleras = carteleras;
+	}
 
 	public String getNombreCartelera() {
 		return nombreCartelera;
@@ -93,5 +106,11 @@ public class Cartelera implements Serializable{
 
 	public void setPublicaciones(Set<Publicacion> publicaciones) {
 		this.publicaciones = publicaciones;
+	}
+
+
+	public void agregarCartelera(Cartelera cartelera) {
+		carteleras.add(cartelera);
+		
 	}
 }

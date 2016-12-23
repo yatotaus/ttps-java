@@ -32,6 +32,11 @@ public class TestCartelera extends HttpServlet {
 		Publicacion p = new Publicacion();
 		
 		Cartelera cartelera = new Cartelera();
+		Cartelera hija1 = new Cartelera();
+		Cartelera hija2 = new Cartelera();
+		
+		hija1.setNombreCartelera("1° Año");
+		hija2.setNombreCartelera("Organización de computadoras");
 		
 		CarteleraDAO carteleraDao = FactoryDAO.getCarteleraDAO();
 		/*
@@ -56,9 +61,11 @@ public class TestCartelera extends HttpServlet {
 		publicacion.setNombrePublicacion("Esta es una publicacion en la cartelera nueva con un suscriptor y un docente publicador ");
 		p.setNombrePublicacion("Otra publicación de la cartelera con suscriptores");
 		p.agregarComentario(coment);
-		cartelera.setNombreCartelera("Cartelera con Suscriptores");
+		cartelera.setNombreCartelera("Cartelera académica");
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
+		cartelera.agregarCartelera(hija1);
+		hija1.agregarCartelera(hija2);
 		
 		cartelera.agregarSuscriptores(docente);
 		cartelera.agregarSuscriptores(user);

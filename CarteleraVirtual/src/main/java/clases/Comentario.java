@@ -17,12 +17,12 @@ public class Comentario implements Serializable {
 	private int id;
 
 
-	@OneToOne(cascade={CascadeType.PERSIST,CascadeType.MERGE})
+	@OneToOne
 	private Usuario autorComentario;
 	private String texto;
 	
 	
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany
 	@JoinColumn(name="Comentario")
 	private Set<Comentario> respuestas;
 	private String estado="Habilitado";

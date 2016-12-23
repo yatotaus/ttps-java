@@ -1,7 +1,19 @@
 package Daos;
 
-import Daos.*;
-import clasesDAOHiberJPA.*;
+import Daos.CarteleraDAO;
+import Daos.UsuarioDAO;
+import Daos.AdminDAO;
+import Daos.ComentarioDAO;
+import Daos.MisCartelerasDAO;
+import Daos.PublicacionDAO;
+
+import clasesDAOHiberJPA.CarteleraDAOHiberJPA;
+import clasesDAOHiberJPA.UsuarioDAOHiberJPA;
+import clasesDAOHiberJPA.AdminDAOHiberJPA;
+import clasesDAOHiberJPA.ComentarioDAOHiberJPA;
+import clasesDAOHiberJPA.MisCartelerasDAOHiberJPA;
+import clasesDAOHiberJPA.PublicacionDAOHiberJPA;
+
 
 public class FactoryDAO {
 	
@@ -9,6 +21,7 @@ public class FactoryDAO {
 	private static UsuarioDAOHiberJPA usuarioDAOHiberJPA = new UsuarioDAOHiberJPA();
 	private static AdminDAOHiberJPA adminDAOHiberJPA = new AdminDAOHiberJPA();
 	private static ComentarioDAOHiberJPA comentarioDAOHiberJPA = new ComentarioDAOHiberJPA();
+	private static MisCartelerasDAOHiberJPA miscartelerasDAOHiberJPA = new MisCartelerasDAOHiberJPA();
 	private static PublicacionDAOHiberJPA publicacionDAOHiberJPA = new PublicacionDAOHiberJPA();
 	
 	public FactoryDAO() {		
@@ -26,6 +39,9 @@ public class FactoryDAO {
 		return (CarteleraDAO) carteleraDAOHiberJPA;
 	}
 	
+	public MisCartelerasDAO getMisCartelerasDAO(){
+		return (MisCartelerasDAO) miscartelerasDAOHiberJPA;
+	}
 	
 	public PublicacionDAO getPublicacionDAO(){
 		return (PublicacionDAO) publicacionDAOHiberJPA;

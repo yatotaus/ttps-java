@@ -17,16 +17,12 @@ public class Usuario implements Serializable {
 	@Column(name="idUsuario")
 	private int idUsuario;
 	
+	//Ver mapeo acá
 	private Integer rol;
 	private String usuario;
 	private String clave;
 	private Integer dni;
 	private String email;
-	private String estado="Habilitado";
-	
-	public Usuario() {
-		super();
-	}
 	
 	public String getEstado() {
 		return estado;
@@ -36,6 +32,13 @@ public class Usuario implements Serializable {
 		this.estado = estado;
 	}
 
+	public MisCarteleras getMisCarteleras() {
+		return misCarteleras;
+	}
+
+	public void setMisCarteleras(MisCarteleras misCarteleras) {
+		this.misCarteleras = misCarteleras;
+	}
 
 	public int getId() {
 		return idUsuario;
@@ -43,6 +46,24 @@ public class Usuario implements Serializable {
 
 	public void setId(int i) {
 		this.idUsuario = i;
+	}
+
+	private String estado="Habilitado";
+	
+		
+	@OneToOne(mappedBy="dueño")
+	private MisCarteleras misCarteleras;
+	
+	public Usuario() {
+		super();
+	}
+
+	public MisCarteleras getMiTemplate() {
+		return misCarteleras;
+	}
+
+	public void setMiTemplate(MisCarteleras miTemplate) {
+		this.misCarteleras = miTemplate;
 	}
 
 	public Usuario(String usuario, String clave,Integer rol) {
