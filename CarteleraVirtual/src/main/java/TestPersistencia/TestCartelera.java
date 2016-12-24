@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import clases.*;
 import Daos.CarteleraDAO;
 import Daos.ComentarioDAO;
 import Daos.FactoryDAO;
@@ -14,14 +14,12 @@ import Daos.FactoryDAO;
 import Daos.PublicacionDAO;
 import Daos.UsuarioDAO;
 */
-import clases.*;
 
 @WebServlet("/TestCartelera")
 public class TestCartelera extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
     private FactoryDAO fd = new FactoryDAO();
-       
 
     public TestCartelera() {
         super();
@@ -32,6 +30,11 @@ public class TestCartelera extends HttpServlet {
 		Publicacion p = new Publicacion();
 		
 		Cartelera cartelera = new Cartelera();
+		Cartelera hija1 = new Cartelera();
+		Cartelera hija2 = new Cartelera();
+		
+		hija1.setNombreCartelera("1° Año");
+		hija2.setNombreCartelera("Organización de computadoras");
 		
 		CarteleraDAO carteleraDao = FactoryDAO.getCarteleraDAO();
 		/*
@@ -56,9 +59,11 @@ public class TestCartelera extends HttpServlet {
 		publicacion.setNombrePublicacion("Esta es una publicacion en la cartelera nueva con un suscriptor y un docente publicador ");
 		p.setNombrePublicacion("Otra publicación de la cartelera con suscriptores");
 		p.agregarComentario(coment);
-		cartelera.setNombreCartelera("Cartelera con Suscriptores");
+		cartelera.setNombreCartelera("Cartelera académica");
 		cartelera.agregarPublicacion(p);
 		cartelera.agregarPublicacion(publicacion);
+		cartelera.agregarCartelera(hija1);
+		hija1.agregarCartelera(hija2);
 		
 		cartelera.agregarSuscriptores(docente);
 		cartelera.agregarSuscriptores(user);
@@ -67,15 +72,13 @@ public class TestCartelera extends HttpServlet {
 		
 		com.setTexto("Comentario que queda");
 
-	
 		comm.setTexto("Quedate comentario");
 		comBorrado.setTexto("Comentario que se borra");
 		
 		comentDAO.agregar(com);
 		comentDAO.agregar(comm);
 		comentDAO.agregar(comBorrado);
-		comentDAO.eliminar(comBorrado);
-		
+		comentDAO.eliminar(comBorrado);		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

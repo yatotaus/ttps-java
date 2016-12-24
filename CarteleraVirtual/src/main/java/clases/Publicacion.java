@@ -17,32 +17,24 @@ public class Publicacion implements Serializable{
 	@Id @GeneratedValue
 	private Long id;
 	
-	
 	private String nombrePublicacion;
 	private String estado="Habilitado";
-	
 	
 	//Bien
 	@OneToOne(cascade=CascadeType.ALL)
 	private Usuario autor;
 	
-	
-	
 	@ManyToOne
 	private Cartelera cartelera;
-	
 	
 	@OneToMany(cascade=CascadeType.ALL)
 	private Set<Comentario> comentarios= new HashSet<Comentario>();;
 	private boolean comentariosHab;
 	
-	
-	
-	
+
 	public Publicacion() {
 		super();
 	}
-	
 
 	public String getEstado() {
 		return estado;

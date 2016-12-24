@@ -15,7 +15,6 @@ public class MisCarteleras implements Serializable{
 	@Column(name="idMisCarteleras")
 	private int id;
 
-	
 	@OneToOne
 	private Usuario dueño;
 	

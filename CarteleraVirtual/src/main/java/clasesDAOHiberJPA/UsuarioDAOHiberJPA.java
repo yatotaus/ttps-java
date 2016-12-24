@@ -9,5 +9,4 @@ public class UsuarioDAOHiberJPA extends GenericoDAOHibernateJPA<Usuario> impleme
 		this.persistentClass = Usuario.class;		
 	}
 
-
 }

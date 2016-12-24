@@ -2,7 +2,6 @@ package clases;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.*;
 
 @Entity
@@ -77,13 +76,14 @@ public class Cartelera implements Serializable{
 		this.id = id;
 	}
 	
-	
 	public boolean getComentarios(){
 		return comentarios;
 	}
+	
 	public void setComentarios(boolean coment){
 		comentarios = coment;
 	}
+	
 	public Set<Cartelera> getCarteleras() {
 		return carteleras;
 	}
@@ -108,9 +108,8 @@ public class Cartelera implements Serializable{
 		this.publicaciones = publicaciones;
 	}
 
-
 	public void agregarCartelera(Cartelera cartelera) {
 		carteleras.add(cartelera);
-		
 	}
+	
 }

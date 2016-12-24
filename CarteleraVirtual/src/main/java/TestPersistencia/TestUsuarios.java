@@ -21,7 +21,6 @@ public class TestUsuarios extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
 		Rol r = new Rol();
 		r.setNombre("Alumno");
 		Usuario user = new Usuario();

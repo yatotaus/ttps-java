@@ -9,5 +9,4 @@ public class UsuarioOnlineDAOHiberJPA extends GenericoDAOHibernateJPA<UsuarioOnl
 		this.persistentClass = UsuarioOnline.class;		
 	}
 
-
 }

@@ -1,9 +1,8 @@
 package clases;
 import java.io.Serializable;
-//import java.sql.Date;
 import java.util.Set;
-
 import javax.persistence.*;
+//import java.sql.Date;
 
 @Entity
 @Table(name="Cometario")
@@ -79,4 +78,5 @@ public class Comentario implements Serializable {
 	public void setAutorComentario(Usuario autorComentario) {
 		this.autorComentario = autorComentario;
 	}
+	
 }

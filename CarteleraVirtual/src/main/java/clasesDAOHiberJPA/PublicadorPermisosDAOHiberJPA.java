@@ -9,5 +9,4 @@ public class PublicadorPermisosDAOHiberJPA extends GenericoDAOHibernateJPA<Publi
 		this.persistentClass = PublicadorPermisos.class;		
 	}
 
-
 }

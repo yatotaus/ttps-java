@@ -2,7 +2,6 @@ package clases;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
@@ -10,16 +9,13 @@ import javax.persistence.ManyToMany;
 public class PublicadorPermisos extends Usuario{
 
 	private static final long serialVersionUID = 1L;
+	
+	@ManyToMany
+	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 
 	public PublicadorPermisos(String usuario, String clave, Integer rol) {
 		super(usuario, clave, rol);
 	}
-	
-	
-	 
-
-	@ManyToMany
-	private Set<Cartelera> carteleras =  new HashSet<Cartelera>();
 	
 	public Set<Cartelera> getCarteleras() {
 		return carteleras;

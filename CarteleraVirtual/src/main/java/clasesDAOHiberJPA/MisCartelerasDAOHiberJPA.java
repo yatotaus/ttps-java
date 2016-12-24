@@ -9,5 +9,4 @@ public class MisCartelerasDAOHiberJPA extends GenericoDAOHibernateJPA<MisCartele
 		this.persistentClass = MisCarteleras.class;		
 	}
 
-
 }

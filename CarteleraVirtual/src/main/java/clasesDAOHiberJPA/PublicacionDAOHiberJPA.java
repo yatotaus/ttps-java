@@ -9,5 +9,4 @@ public class PublicacionDAOHiberJPA extends GenericoDAOHibernateJPA<Publicacion>
 		this.persistentClass = Publicacion.class;		
 	}
 
-
 }

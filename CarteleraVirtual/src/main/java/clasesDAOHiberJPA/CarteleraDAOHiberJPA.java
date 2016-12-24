@@ -8,4 +8,6 @@ public class CarteleraDAOHiberJPA extends GenericoDAOHibernateJPA<Cartelera> imp
 	public CarteleraDAOHiberJPA() {
 		this.persistentClass = Cartelera.class;		
 	}
+	
 }
+

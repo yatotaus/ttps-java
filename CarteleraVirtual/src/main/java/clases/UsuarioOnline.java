@@ -2,19 +2,16 @@ package clases;
 
 import java.util.HashSet;
 import java.util.Set;
-
+import javax.persistence.ManyToMany;
 import javax.persistence.Entity;
 /*
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 */
-import javax.persistence.ManyToMany;
 
 @Entity
  
 public class UsuarioOnline extends Usuario {
-	
-	
 	/**
 	 * 
 	 */
@@ -42,6 +39,5 @@ public class UsuarioOnline extends Usuario {
 	public void setCarteleras(Set<Cartelera> carteleras) {
 		this.carteleras = carteleras;
 	}
-
 
 }

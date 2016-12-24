@@ -47,7 +47,6 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		em.remove(em.merge(entity));
 		etx.commit();
 		em.close();		
-		
 	}
 
 	
@@ -59,24 +58,20 @@ public class GenericoDAOHibernateJPA<T> implements GenericDAO<T>{
 		return entity;
 	}
 	
-		
-
+	
 	@Override
 	public void persistir(T Objeto) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
 
 	@Override
 	public void recuperar(T Objeto) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void existe(T Objeto) {
 		// TODO Auto-generated method stub
-		
 	}
 	
 	@SuppressWarnings("unchecked")

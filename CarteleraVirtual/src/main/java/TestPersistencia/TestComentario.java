@@ -11,7 +11,6 @@ import Daos.*;
 import clases.*;
 
 
-
 @WebServlet("/TestComentario")
 public class TestComentario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,7 +28,6 @@ public class TestComentario extends HttpServlet {
 		Usuario eliminarEntidad = new Usuario();
 		Usuario dejar = new Admin();
 		
-		
 		eliminarId.setEmail("Usuario se se va a eliminar por id");
 		eliminarEntidad.setEmail("Usuario se se va a eliminar por entidad");
 		dejar.setEmail("Usuario que no se borra");
@@ -40,9 +38,6 @@ public class TestComentario extends HttpServlet {
 		
 		userDAO.eliminar(eliminarEntidad);
 		userDAO.eliminar(eliminarId.getId());
-		
-		
-		
 		
 		response.getWriter().append("Terminé el test");
 	}

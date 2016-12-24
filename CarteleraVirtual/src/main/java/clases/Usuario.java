@@ -1,10 +1,10 @@
 package clases;
 import java.io.Serializable;
+import javax.persistence.*;
 /*
 import java.util.HashSet;
 import java.util.Set;
 */
-import javax.persistence.*;
 
 @Entity
  
@@ -16,6 +16,9 @@ public class Usuario implements Serializable {
 	@Id @GeneratedValue
 	@Column(name="idUsuario")
 	private int idUsuario;
+
+	@OneToOne(mappedBy="dueño")
+	private MisCarteleras misCarteleras;
 	
 	//Ver mapeo acá
 	private Integer rol;
@@ -23,6 +26,12 @@ public class Usuario implements Serializable {
 	private String clave;
 	private Integer dni;
 	private String email;
+	
+	private String estado="Habilitado";
+
+	public Usuario() {
+		super();
+	}
 	
 	public String getEstado() {
 		return estado;
@@ -46,16 +55,6 @@ public class Usuario implements Serializable {
 
 	public void setId(int i) {
 		this.idUsuario = i;
-	}
-
-	private String estado="Habilitado";
-	
-		
-	@OneToOne(mappedBy="dueño")
-	private MisCarteleras misCarteleras;
-	
-	public Usuario() {
-		super();
 	}
 
 	public MisCarteleras getMiTemplate() {
@@ -92,12 +91,15 @@ public class Usuario implements Serializable {
 	public String getUsuario() {
 		return usuario;
 	}
+
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
+
 	public String getClave() {
 		return clave;
 	}
+
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
@@ -109,4 +111,5 @@ public class Usuario implements Serializable {
 	public void setRol(Integer rol) {
 		this.rol = rol;
 	}
+
 }

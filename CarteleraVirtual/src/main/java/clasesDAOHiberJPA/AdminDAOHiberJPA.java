@@ -8,4 +8,5 @@ public class AdminDAOHiberJPA extends GenericoDAOHibernateJPA<Admin> implements 
 		public AdminDAOHiberJPA() {
 			this.persistentClass = Admin.class;		
 		}
+		
 }

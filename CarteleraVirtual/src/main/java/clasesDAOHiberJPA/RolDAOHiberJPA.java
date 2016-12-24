@@ -9,5 +9,4 @@ public class RolDAOHiberJPA extends GenericoDAOHibernateJPA<Rol> implements RolD
 		this.persistentClass = Rol.class;		
 	}
 
-
 }

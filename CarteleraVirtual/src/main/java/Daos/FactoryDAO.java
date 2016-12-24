@@ -1,11 +1,13 @@
 package Daos;
 
+/*	No se usan (creo)	*/
 import Daos.CarteleraDAO;
 import Daos.UsuarioDAO;
 import Daos.AdminDAO;
 import Daos.ComentarioDAO;
 import Daos.MisCartelerasDAO;
 import Daos.PublicacionDAO;
+/*	---	*/
 
 import clasesDAOHiberJPA.CarteleraDAOHiberJPA;
 import clasesDAOHiberJPA.UsuarioDAOHiberJPA;
